@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Solark Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="HAR_Solark_BaseNRPawn_b"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+                    <value>
+                        <li>CombatExtended.ITab_Inventory</li>
+                    </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@Name="HAR_Solark_BaseNRPawn_b"]/comps</xpath>
+                    <value>
+                        <li Class="CombatExtended.CompProperties_Inventory" />
+						<li Class="CombatExtended.CompProperties_TacticalManager" />
+                    </value>
+			</li>
+			
+
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[@Name="HAR_Solark_BaseNRPawn_b"]/comps</xpath>
+				<value>
+					<li>
+					<compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+
+	
+
+			<li Class="PatchOperationAdd">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/statBases</xpath>
+				  <value>
+					<Suppressability>0.2</Suppressability>
+					<SmokeSensitivity>0.2</SmokeSensitivity>
+					<MeleeCritChance>1.0</MeleeCritChance>
+					<MeleeParryChance>1.0</MeleeParryChance>
+				  </value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/race/baseBodySize</xpath>
+				  <value>
+					<baseBodySize>1</baseBodySize>
+				  </value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/ThingDef[@Name="HAR_Solark_BaseNRPawn_b"]/comps/li[@Class="Solark_Dll.Solark_CompProperties_CommandExplosive"]/explosiveDamageType</xpath>
+				  <value>
+					<explosiveDamageType>Bomb_Solark</explosiveDamageType>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/statBases/ArmorRating_Sharp</xpath>
+				  <value>
+					<ArmorRating_Sharp>18</ArmorRating_Sharp>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/statBases/ArmorRating_Blunt</xpath>
+				  <value>
+					<ArmorRating_Blunt>40</ArmorRating_Blunt>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/statBases/ArmorRating_Heat</xpath>
+				  <value>
+					<ArmorRating_Heat>0.5</ArmorRating_Heat>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>left fist</label>
+							<capacities>
+								<li>HAR_SA_Damage_a</li>
+							</capacities>
+							<power>30</power>
+							<cooldownTime>1</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>60</armorPenetrationBlunt>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right fist</label>
+							<capacities>
+								<li>HAR_SA_Damage_a</li>
+							</capacities>
+							<power>30</power>
+							<cooldownTime>1</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>60</armorPenetrationBlunt>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>50</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.05</chanceFactor>
+							<armorPenetrationBlunt>15</armorPenetrationBlunt>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/alienRace/raceRestriction/whiteApparelList</xpath>
+				  <value>
+					<li>CE_Apparel_TacVest</li>
+					<li>CE_Apparel_Backpack</li>
+					<li>CE_Apparel_TribalBackpack</li>
+					<li>CE_Apparel_BallisticShield</li>
+					<li>CE_Apparel_MeleeShield</li>
+					<li>CE_Apparel_GasMask</li>
+					<li>CE_Apparel_ImprovGasMask</li>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Solark_b"]/damageMultipliers</xpath>
+				  <value>
+					<li> 
+						<damageDef>Bomb_Solark</damageDef>
+						<multiplier>0</multiplier> 
+					</li>
+					<li> 
+						<damageDef>Fragment</damageDef>
+						<multiplier>0.3</multiplier> 
+					</li>
+					<li> 
+						<damageDef>Bomb_Secondary</damageDef>
+						<multiplier>0.2</multiplier> 
+					</li>
+					<li> 
+						<damageDef>Thermobaric</damageDef>
+						<multiplier>0.3</multiplier> 
+					</li>
+					<li> 
+						<damageDef>Flame_Secondary</damageDef>
+						<multiplier>2</multiplier> 
+					</li>
+					<li> 
+						<damageDef>PrometheumFlame</damageDef>
+						<multiplier>2</multiplier> 
+					</li>
+				  </value>
+			</li>
+			
+			
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

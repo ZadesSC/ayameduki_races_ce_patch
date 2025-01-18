@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		
+		<operations>
+			<li Class="PatchOperationFindMod">
+			<mods><li>[Aya]Idearn Race</li></mods>
+			<match Class="PatchOperationSequence">
+			<operations>
+
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HAR_IA_Item_ArcheCartridge"]/tools</xpath>
+					<value>
+						<tools>
+							<li Class="CombatExtended.ToolCE">
+								<label>bottle</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>2</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+						</tools>
+					</value>
+				</li>
+			</operations>
+			</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

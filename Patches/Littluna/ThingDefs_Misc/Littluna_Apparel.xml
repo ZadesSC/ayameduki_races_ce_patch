@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Littluna Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+
+        <!--========= Forbidden Armor =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_LL_A_a"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<ArmorRating_Sharp>20</ArmorRating_Sharp>
+				<Bulk>80</Bulk>
+				<WornBulk>10</WornBulk>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_LL_A_a"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>44</ArmorRating_Blunt>
+				</value>
+		</li>
+
+        <!--========= Forbidden Helmet =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_LL_H_f"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<ArmorRating_Sharp>18</ArmorRating_Sharp>
+				<Bulk>40</Bulk>
+				<WornBulk>10</WornBulk>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_LL_H_f"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>38</ArmorRating_Blunt>
+				</value>
+		</li>
+
+
+        </operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

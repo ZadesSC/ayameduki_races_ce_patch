@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[1.4]Nearmare Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+		
+			<!--========= Stuffable =========-->
+			
+			
+			<!--Middle Low-->
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="HAR_CO_Apparel_Tops_a" or
+				defName="HAR_CO_Apparel_Tops_b" or
+				defName="HAR_CO_Apparel_Tops_c"
+				]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+					<Bulk>1</Bulk>
+					<WornBulk>1</WornBulk>
+				</value>
+			</li>
+			
+			<!--Shell-->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="HAR_CO_Apparel_Shell_a"
+				]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+					<Bulk>10</Bulk>
+					<WornBulk>5</WornBulk>
+				</value>
+			</li>
+			
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="HAR_CO_Apparel_Head_a" or
+				defName="HAR_CO_Apparel_Head_b" or
+				defName="HAR_CO_Apparel_Head_c"
+				]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+					<StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+					<Bulk>1</Bulk>
+					<WornBulk>1</WornBulk>
+				</value>
+			</li>
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

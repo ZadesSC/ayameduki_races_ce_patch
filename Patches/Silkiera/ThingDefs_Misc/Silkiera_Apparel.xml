@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Silkiera Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+
+        <!--========= Artifician child's blouse, covering, school uniform, t-shirt =========-->
+        <!-- <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+				defName="Aya_Race_Ap_C_T_a" or
+				defName="Aya_Race_Ap_C_T_b" or
+				defName="Aya_Race_Ap_C_T_c" or
+                defName="Aya_Race_Ap_C_T_d" 
+				]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+				<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
+				<Bulk>2</Bulk>
+				<WornBulk>0</WornBulk>
+				</value>
+		</li> -->
+
+        <!--========= Thermoplate Armor =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_a"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<ArmorRating_Sharp>12</ArmorRating_Sharp>
+				<Bulk>80</Bulk>
+				<WornBulk>10</WornBulk>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_a"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>26</ArmorRating_Blunt>
+				</value>
+		</li>
+
+        <!--========= Thermoplate Helmet =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_AH_f"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<ArmorRating_Sharp>10</ArmorRating_Sharp>
+				<Bulk>40</Bulk>
+				<WornBulk>10</WornBulk>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_AH_f"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>24</ArmorRating_Blunt>
+				</value>
+		</li>
+
+        <!--========= Youko Kimono =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_b"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<ArmorRating_Sharp>18</ArmorRating_Sharp>
+				<Bulk>10</Bulk>
+				<WornBulk>5</WornBulk>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_b"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>42</ArmorRating_Blunt>
+				</value>
+		</li>
+
+        <!--========= Youko Hairpin =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_AH_g"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<ArmorRating_Sharp>16</ArmorRating_Sharp>
+				<Bulk>1</Bulk>
+				<WornBulk>1</WornBulk>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_SK_AH_g"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>40</ArmorRating_Blunt>
+				</value>
+		</li>
+
+        </operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

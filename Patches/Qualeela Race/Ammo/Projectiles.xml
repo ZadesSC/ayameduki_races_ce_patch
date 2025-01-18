@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Qualeela Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_QL_Projectile_a"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>HAR_QL_Projectile_a</defName>
+						<label>縛刃『ガイスト』</label>
+						<graphicData>
+						  <texPath>HAR_QL/Weapons/HAR_QL_W_A</texPath>
+						  <graphicClass>Graphic_Random</graphicClass>
+						  <drawSize>2,2</drawSize>
+						</graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						  <speed>88</speed>
+						  <damageDef>HAR_QL_BombSuper</damageDef>
+						  <explosionRadius>1</explosionRadius>
+						  <explosionEffect>HAR_QL_Effect_c</explosionEffect>
+						  <preExplosionSpawnThingDef>HAR_QL_Weapon_a_Grenade</preExplosionSpawnThingDef>
+						  <preExplosionSpawnChance>1</preExplosionSpawnChance>
+						  <preExplosionSpawnThingCount>1</preExplosionSpawnThingCount>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_QL_Weapon_b_Bullet"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>HAR_QL_Weapon_b_Bullet</defName>
+						<label>ツェマクキドン</label>
+						<graphicData>
+						  <texPath>HAR_QL/Weapons/HAR_QL_W_A</texPath>
+						  <graphicClass>Graphic_Random</graphicClass>
+						  <drawSize>2,2</drawSize>
+						</graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+						  <speed>100</speed>
+						  <damageDef>HAR_QL_Damage_c</damageDef>
+						  <damageAmountBase>22</damageAmountBase>
+						  <armorPenetrationSharp>20</armorPenetrationSharp>
+						  <armorPenetrationBlunt>30</armorPenetrationBlunt>
+						  <stoppingPower>10</stoppingPower>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+			
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

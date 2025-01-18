@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Idearn Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+		
+            <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="HAR_Idearn_BasePawn"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+                    <value>
+                        <li>CombatExtended.ITab_Inventory</li>
+                    </value>
+			</li>
+
+            <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@Name="HAR_Idearn_BasePawn"]/comps</xpath>
+                    <value>
+                        <li Class="CombatExtended.CompProperties_Inventory" />
+						<li Class="CombatExtended.CompProperties_TacticalManager" />
+                    </value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[@Name="HAR_Idearn_BasePawn"]/comps</xpath>
+				<value>
+					<li>
+					<compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Idearn_Race_Base"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Idearn_Race_Base"]/statBases</xpath>
+				  <value>
+					<Suppressability>1</Suppressability>
+					<SmokeSensitivity>1</SmokeSensitivity>
+				  </value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+			 <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Idearn_Race_Base"]/alienRace/raceRestriction/whiteApparelList</xpath>
+				  <value>
+					<li>CE_Apparel_TacVest</li>
+					<li>CE_Apparel_Backpack</li>
+					<li>CE_Apparel_TribalBackpack</li>
+					<li>CE_Apparel_BallisticShield</li>
+					<li>CE_Apparel_MeleeShield</li>
+					<li>CE_Apparel_GasMask</li>
+					<li>CE_Apparel_ImprovGasMask</li>
+				  </value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Laches_a"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>1</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Laches_a"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>1</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Laches_a"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Laches_a"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>left fist</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>1</power>
+							<cooldownTime>1.33</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+							<armorPenetrationBlunt>0.162</armorPenetrationBlunt>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right fist</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>1</power>
+							<cooldownTime>1.33</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+							<armorPenetrationBlunt>0.162</armorPenetrationBlunt>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>2</power>
+							<cooldownTime>4.49</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationBlunt>0.625</armorPenetrationBlunt>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_a"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>8</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_a"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>16</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_a"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_a"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>12</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>12</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_b"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>4</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_b"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>7</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_b"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Charmides_b"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>12</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>12</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_a"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>17</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_a"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>30</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_a"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_a"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>24</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>24</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_b"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>14</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_b"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>25</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_b"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Menexenus_b"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>24</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>24</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>1</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_a"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>35</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_a"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>45</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_a"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_a"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>33</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>3</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>33</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>3</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_b"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>28</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_b"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>40</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_b"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Theaetetus_b"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>33</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>3</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>33</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>3</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Critias"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>40</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Critias"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>75</ArmorRating_Blunt>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Critias"]/statBases/ArmorRating_Heat</xpath> 
+					<value>
+						<ArmorRating_Heat>10</ArmorRating_Heat>
+					</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Idearn_Critias"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>100</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>20</amount>
+							</li>
+							<li>
+								<def>Flame</def>
+								<amount>50</amount>
+							</li>
+							<li>
+								<def>Frostbite</def>
+								<amount>50</amount>
+							</li>
+							<li>
+								<def>ScratchToxic</def>
+								<amount>50</amount>
+							</li>
+							<li>
+								<def>Crush</def>
+								<amount>25</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>オケアノスクシフォス</label>
+							<capacities>
+								<li>HAR_IA_Damage_a</li>
+							</capacities>
+							<power>100</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>20</amount>
+							</li>
+							<li>
+								<def>Flame</def>
+								<amount>50</amount>
+							</li>
+							<li>
+								<def>Frostbite</def>
+								<amount>50</amount>
+							</li>
+							<li>
+								<def>ScratchToxic</def>
+								<amount>50</amount>
+							</li>
+							<li>
+								<def>Crush</def>
+								<amount>25</amount>
+							</li>
+							</extraMeleeDamages>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

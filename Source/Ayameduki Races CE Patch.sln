@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayameduki Races CE Patch", "Ayameduki Races CE Patch.csproj", "{C6A6EAB0-80F5-41F7-8E0B-09031ED2F7C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6A6EAB0-80F5-41F7-8E0B-09031ED2F7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A6EAB0-80F5-41F7-8E0B-09031ED2F7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A6EAB0-80F5-41F7-8E0B-09031ED2F7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A6EAB0-80F5-41F7-8E0B-09031ED2F7C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

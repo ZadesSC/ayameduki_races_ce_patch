@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		
+		<operations>
+			<li Class="PatchOperationFindMod">
+			<mods><li>[Aya]Eveliet Race</li></mods>
+			<match Class="PatchOperationSequence">
+			<operations>
+				
+                <!--========= Herem Mastema =========-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HAR_EL_Weapon_a"]/tools</xpath>
+					<value>
+						<tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>聖絶</label>
+                                <capacities>
+                                    <li>HAR_EL_Damage_EX</li>
+                                </capacities>
+                                <power>60</power>
+                                <cooldownTime>1</cooldownTime>
+                                <armorPenetrationSharp>60</armorPenetrationSharp>
+								<armorPenetrationBlunt>12</armorPenetrationBlunt>
+                                <extraMeleeDamages>
+                                    <li>
+                                        <def>Stun</def>
+                                        <amount>10</amount>
+                                    </li>
+                                </extraMeleeDamages>
+                            </li>
+                        </tools>
+					</value>
+				</li>
+
+			</operations>
+			</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

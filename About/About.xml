@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Ayameduki Races Combat Extended Patch</name>
+  <author>Zades</author>
+  <supportedVersions>
+    <li>1.4</li>
+	<li>1.5</li>
+  </supportedVersions>
+  <packageId>zades.ayamedukiracece</packageId>
+  <description>Patches Ayameduki Races for Combat Extended</description>
+  <loadAfter>
+    <li>CETeam.CombatExtended</li>
+    <li>ayameduki.haridhale</li>
+    <li>ayameduki.haridhaleex</li>
+  </loadAfter>
+</ModMetaData>

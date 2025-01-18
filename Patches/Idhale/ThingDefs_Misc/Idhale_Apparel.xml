@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Idhale Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+
+        <!--========= Akashawear =========-->
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_IH_AT_z"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+				<StuffEffectMultiplierArmor>5</StuffEffectMultiplierArmor>
+				<Bulk>5</Bulk>
+				<WornBulk>1</WornBulk>
+				</value>
+		</li>
+
+        </operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

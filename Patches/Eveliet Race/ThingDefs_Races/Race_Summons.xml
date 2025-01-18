@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Eveliet Race</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+		
+			
+			
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/ThingDef[@Name="HAR_EL_Summon_Base"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			
+			<li Class="PatchOperationAdd">
+			 <xpath>Defs/ThingDef[@Name="HAR_EL_Summon_Base"]/statBases</xpath>
+				  <value>
+					<Suppressability>0</Suppressability>
+					<SmokeSensitivity>0</SmokeSensitivity>
+					<ArmorRating_Electric>1</ArmorRating_Electric>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/ThingDef[@Name="HAR_EL_Summon_Base"]/statBases/ArmorRating_Sharp</xpath>
+				  <value>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+					<MeleeDodgeChance>0</MeleeDodgeChance>
+					<MeleeCritChance>0</MeleeCritChance>
+					<MeleeParryChance>0</MeleeParryChance>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>Defs/ThingDef[@Name="HAR_EL_Summon_Base"]/statBases/ArmorRating_Blunt</xpath>
+				  <value>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[@Name="HAR_EL_Summon_Base"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>left claw</label>
+                            <capacities>
+                            <li>ScratchToxic</li>
+                            </capacities>
+                            <power>0.5</power>
+                            <cooldownTime>10</cooldownTime>
+                            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

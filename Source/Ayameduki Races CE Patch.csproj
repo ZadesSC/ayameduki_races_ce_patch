@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Put this PropertyGroup at the top -->
+  <PropertyGroup>
+    <!-- Basic info -->
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Ayameduki_Races_CE_Patch</AssemblyName>
+    <RootNamespace>zades.ayamedukiracece</RootNamespace>
+
+    <!-- Turn off modern C# features that conflict with net472 defaults -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>7.3</LangVersion>
+
+    <!-- Turn off generated assembly info to avoid duplicates -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <!-- Ensure references aren't copied automatically -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+
+    <!-- 
+      The crucial properties:
+      OutputPath and OutDir control where the final DLL goes.
+      AppendTargetFrameworkToOutputPath = false ensures no 'net472' subfolder.
+    -->
+    <OutputPath>..\Assemblies</OutputPath>
+    <OutDir>..\Assemblies</OutDir>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>G:\Games\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>G:\Games\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </Reference>
+    <Reference Include="Idhale">
+      <HintPath>G:\Games\Steam\steamapps\workshop\content\294100\2227425882\1.5\Assemblies\Idhale.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>G:\Games\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
+    </Reference>
+  </ItemGroup>
+
+</Project>
