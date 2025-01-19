@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Enforcer Boss</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+
+            <!-- Values that are applied to the base class -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[@Name="BOSS_Enforcer_BaseWeaponNeolithic"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>ミィーティアインパクト</label>
+                            <capacities>
+                                <li>BOSS_EF_Damage_a</li>
+                            </capacities>
+                            <power>30</power><!--										■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--							■クールタイム-->
+                            <armorPenetrationSharp>7.5</armorPenetrationSharp>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>ミィーティアインパクト</label>
+                            <capacities>
+                                <li>BOSS_EF_Damage_a</li>
+                            </capacities>
+                            <power>30</power><!--										■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--							■クールタイム-->
+                            <armorPenetrationSharp>7.5</armorPenetrationSharp>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[@Name="BOSS_Enforcer_BaseWeaponNeolithic_b"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>ミィーティアインパクト</label>
+                            <capacities>
+                                <li>BOSS_EF_Damage_a</li>
+                            </capacities>
+                            <power>30</power><!--										■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--							■クールタイム-->
+                            <armorPenetrationSharp>7.5</armorPenetrationSharp>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>ミィーティアインパクト</label>
+                            <capacities>
+                                <li>BOSS_EF_Damage_a</li>
+                            </capacities>
+                            <power>30</power><!--										■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--							■クールタイム-->
+                            <armorPenetrationSharp>7.5</armorPenetrationSharp>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+
+
+            <!-- Shooting Flare -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>Weapon_Enforcer_a</defName>
+                <statBases>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <ShotSpread>0.04</ShotSpread>
+                    <SwayFactor>1.4</SwayFactor>
+                    <Bulk>13</Bulk>
+                    <Mass>8</Mass>
+                    <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+                </statBases>
+                    
+                <Properties>
+                    <recoilAmount>1.5</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Weapon_Enforcer_Bullet_a</defaultProjectile>
+                    <warmupTime>1</warmupTime>
+                    <range>20</range>
+                    <burstShotCount>3</burstShotCount>
+                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <soundCast>Shot_Revolver</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+            </li>
+
+            
+            <!-- Comet Pulse -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>Weapon_Enforcer_z</defName>
+                <statBases>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <ShotSpread>0.04</ShotSpread>
+                    <SwayFactor>1.4</SwayFactor>
+                    <Bulk>13</Bulk>
+                    <Mass>8</Mass>
+                    <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+                </statBases>
+                    
+                <Properties>
+                    <recoilAmount>1.5</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <defaultProjectile>Weapon_Enforcer_Bullet_z</defaultProjectile>
+                    <warmupTime>0.5</warmupTime>
+                    <range>20</range>
+                    <burstShotCount>1</burstShotCount>
+                    <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                    <soundCast>Shot_Revolver</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+            </li>
+
+        </operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

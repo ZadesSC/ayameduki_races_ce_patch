@@ -9,7 +9,7 @@
 			<operations>
 			
 			
-			
+			<!--========= Adama Helev =========-->
 			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 			<defName>HAR_QL_Weapon_a</defName>
 				<statBases>
@@ -30,7 +30,6 @@
 					<range>40.9</range>
 					<soundCast>HAR_QL_Sound_b</soundCast>
 					<soundCastTail>GunTail_Heavy</soundCastTail>
-					<onlyManualCast>true</onlyManualCast>
 					<stopBurstWithoutLos>false</stopBurstWithoutLos>
 					<targetParams>
 						<canTargetLocations>true</canTargetLocations>
@@ -102,13 +101,11 @@
 					<soundCastTail>GunTail_Heavy</soundCastTail>
 					<muzzleFlashScale>9</muzzleFlashScale>
         			<requireLineOfSight>false</requireLineOfSight>
-					<onlyManualCast>true</onlyManualCast>
 					<targetParams>
 						<canTargetLocations>true</canTargetLocations>
 					</targetParams>
 				</Properties>
 				<FireModes>
-					<aimedBurstShotCount>25</aimedBurstShotCount>
 					<aiAimMode>AimedShot</aiAimMode>
       				<noSingleShot>true</noSingleShot>
 				</FireModes>

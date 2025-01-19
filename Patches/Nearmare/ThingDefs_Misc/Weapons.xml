@@ -195,7 +195,7 @@
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/verbs/li[@Class="CombatExtended.VerbPropertiesCE"]/burstShotCount</xpath>
                     <value>
-                        <burstShotCount>20</burstShotCount>
+                        <burstShotCount>25</burstShotCount>
                     </value>
                 </li>
 
@@ -216,15 +216,6 @@
                 <li Class="PatchOperationRemove">
 				   <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]</xpath>
                 </li>
-
-
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/comps/li[@Class="CombatExtended.CompProperties_FireModes"]/aimedBurstShotCount</xpath>
-                    <value>
-                        <aimedBurstShotCount>25</aimedBurstShotCount>
-                    </value>
-                </li>
-                
 
 			</operations>
 			</match>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		
+		<operations>
+			<li Class="PatchOperationFindMod">
+			<mods><li>[Aya]Requeen Boss</li></mods>
+			<match Class="PatchOperationSequence">
+			<operations>
+
+                <!-- Values that are applied to the base class -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="BOSS_RQ_AutocannonTurret"]/thingClass</xpath>
+                    <value>
+                        <thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="BOSS_RQ_AutocannonTurret"]/fillPercent</xpath>
+                    <value>
+                        <fillPercent>0.75</fillPercent>
+                    </value>
+                </li>
+
+                <!-- Judgement -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="BOSS_RQ_Turret_Sniper"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+                </li>
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>BOSS_RQ_Gun_TurretSniper</defName>
+                    <statBases>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.01</ShotSpread>
+                        <SwayFactor>1.3</SwayFactor>
+                        <Bulk>5</Bulk>
+                        <Mass>8</Mass>
+                        <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+                    </statBases>
+                        
+                    <Properties>
+                        <recoilAmount>1</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <defaultProjectile>BOSS_RQ_Bullet_TurretSniper</defaultProjectile>
+                        <warmupTime>0</warmupTime>
+                        <range>75</range>
+                        <minRange>6</minRange>
+                        <burstShotCount>18</burstShotCount>
+                        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                        <soundCast>Shot_TurretSniper</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>18</muzzleFlashScale>
+                    </Properties>
+                </li>
+
+                <!-- Testament -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="BOSS_RQ_Turret_Sniper_b"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="BOSS_RQ_Turret_Sniper_b"]/building/turretBurstCooldownTime</xpath>
+                    <value>
+                        <turretBurstCooldownTime>120</turretBurstCooldownTime>
+                    </value>
+                </li>
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>BOSS_RQ_Gun_TurretSniper_b</defName>
+                    <statBases>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.01</ShotSpread>
+                        <SwayFactor>1</SwayFactor>
+                        <Bulk>5</Bulk>
+                        <Mass>8</Mass>
+                        <RangedWeapon_Cooldown>120</RangedWeapon_Cooldown>
+                    </statBases>
+                        
+                    <Properties>
+                        <recoilAmount>1.6</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <defaultProjectile>BOSS_RQ_Bullet_TurretSniper_b</defaultProjectile>
+                        <warmupTime>0</warmupTime>
+                        <range>80</range>
+                        <minRange>30</minRange>
+                        <burstShotCount>3</burstShotCount>
+                        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+                        <soundCast>InfernoCannon_Fire</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <onlyManualCast>true</onlyManualCast>
+                        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+                        <targetParams>
+                            <canTargetLocations>true</canTargetLocations>
+                        </targetParams>
+                        <muzzleFlashScale>14</muzzleFlashScale>
+                    </Properties>
+                </li>
+
+		    </operations>
+			</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

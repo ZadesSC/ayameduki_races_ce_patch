@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Requeen Boss</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+
+            <!-- Values that are applied to the base class -->
+            <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[@Name="BOSS_RQ_Monster_race_Base"]</xpath>
+                <value>
+                    <li Class="CombatExtended.RacePropertiesExtensionCE">
+                        <bodyShape>Humanoid</bodyShape>
+                    </li>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd">
+			    <xpath>Defs/ThingDef[@Name="BOSS_RQ_Monster_race_Base"]/statBases</xpath>
+				    <value>
+					    <Suppressability>0</Suppressability>
+					    <SmokeSensitivity>0</SmokeSensitivity>
+				    </value>
+			</li>
+
+            <!-- Spearheader Race -->
+            <!-- General-purpose melee units. DPS comparable to that of a wolf. -->
+            <!-- Uses a weapon called Destroyer-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_a"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.10</MeleeDodgeChance>
+                    <MeleeCritChance>0.25</MeleeCritChance>
+                    <MeleeParryChance>0.10</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_a"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>4</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_a"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>8</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_a"]/tools</xpath> 
+				<value>
+					<tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>11</power><!--■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>2</armorPenetrationSharp>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>11</power><!--■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>2</armorPenetrationSharp>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>突進</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>17</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                            <chanceFactor>0.2</chanceFactor>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Stun</def><!--■状態異常-->
+                                <amount>10</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>0</armorPenetrationSharp>
+                            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+            <!-- Sniper Race -->
+            <!-- Relatively fragile long-range firing support units. Can fire strong bullets in bursts of two at a range slightly exceeding that of a sniper rifle. -->
+            <!-- Uses a weapon called Penetrator-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_b"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.1</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_b"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>2</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_b"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>4</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_b"]/tools</xpath> 
+				<value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>7</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>7</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Supressor Race -->
+            <!-- Mid-range, high projectile count units. Can unleash a flurry of 25 weak bullets at a time, requiring a lengthy cooldown period after.-->
+            <!-- Uses a weapon called Desperado -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_c"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.1</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_c"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>3</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_c"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>6</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_c"]/tools</xpath> 
+				<value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>7</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>7</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Contaminator Race -->
+            <!-- Fragile melee units whose attacks inflict a capacity-reducing hediff. Consciousness, manipulation, hearing, movement and sight are all affected.-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_d"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.1</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_d"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>3</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_d"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>6</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_d"]/tools</xpath> 
+				<value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>精神干渉</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>5</power><!--■攻撃力-->
+                            <cooldownTime>1</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>BOSS_RQ_Damage_b</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>精神干渉</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>5</power><!--■攻撃力-->
+                            <cooldownTime>1</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>BOSS_RQ_Damage_b</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>突進</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>10</power><!--■攻撃力-->
+                            <cooldownTime>4</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                            <chanceFactor>0.2</chanceFactor>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>BOSS_RQ_Damage_b</def><!--■状態異常-->
+                                <amount>10</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Bomber Race -->
+            <!-- Mid-range explosive specialist units. Launches high-powered grenades and explodes on death.-->
+            <!-- Uses a weapon called Carnage -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_e"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.1</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_e"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>2</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_e"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>4</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_e"]/tools</xpath> 
+				<value>
+					<tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>3</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>3</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Cutter Race -->
+            <!-- Melee units with incredibly powerful yet slow strikes. One successful strike can deal up to 40 damage with 65% penetration, but requires a cooldown of 4 seconds.-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_f"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.25</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_f"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>7</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_f"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>14</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_f"]/tools</xpath> 
+				<value>
+					<tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>40</power><!--■攻撃力-->
+                            <cooldownTime>4</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>12</armorPenetrationSharp>
+                            <armorPenetrationBlunt>24</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                                <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>40</power><!--■攻撃力-->
+                            <cooldownTime>4</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>12</armorPenetrationSharp>
+                            <armorPenetrationBlunt>24</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>突進</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>50</power><!--■攻撃力-->
+                            <cooldownTime>5</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                            <chanceFactor>0.2</chanceFactor>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Stun</def><!--■状態異常-->
+                                <amount>10</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>0</armorPenetrationSharp>
+                            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Assaulter Race -->
+            <!-- Generic mid-range gunner units. Sprays small bursts of weak bullets, but with a mere half second in between volleys.-->
+            <!-- Uses a weapon called Tempester -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_g"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.1</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_g"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>3</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_g"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>6</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_g"]/tools</xpath> 
+				<value>
+					<tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>7</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>7</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>8</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Scouter Race -->
+            <!-- Incredibly quick melee units with similarly fast (yet weak) strikes. Their textures are partially transparent, making them easy for players to miss.-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_h"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                    <MeleeCritChance>0.1</MeleeCritChance>
+                    <MeleeParryChance>0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_h"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>3</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_h"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>6</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_h"]/tools</xpath> 
+				<value>
+					<tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>2</power><!--■攻撃力-->
+                            <cooldownTime>0.5</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>5</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>2</power><!--■攻撃力-->
+                            <cooldownTime>0.5</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>5</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+
+            <!-- Wounded Queenkin -->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_y"]/statBases</xpath>
+                <value>
+                    <MeleeDodgeChance>0.05</MeleeDodgeChance>
+                    <MeleeCritChance>0.05</MeleeCritChance>
+                    <MeleeParryChance>0.05</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_y"]/statBases/ArmorRating_Sharp</xpath> 
+					<value>
+						<ArmorRating_Sharp>1</ArmorRating_Sharp>
+					</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_y"]/statBases/ArmorRating_Blunt</xpath> 
+					<value>
+						<ArmorRating_Blunt>2</ArmorRating_Blunt>
+					</value>
+			</li>
+
+            <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Monster_race_Summon_y"]/tools</xpath> 
+				<value>
+					<tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>3</power><!--■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>3</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>超振動ブレード</label>
+                            <capacities>
+                            <li>BOSS_RQ_Scratch</li>
+                            </capacities>
+                            <power>3</power><!--■攻撃力-->
+                            <cooldownTime>2</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Scratch</def><!--■状態異常-->
+                                <amount>3</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>1</armorPenetrationSharp>
+                            <armorPenetrationBlunt>1</armorPenetrationBlunt>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>突進</label>
+                            <capacities>
+                            <li>Blunt</li>
+                            </capacities>
+                            <power>4</power><!--■攻撃力-->
+                            <cooldownTime>3</cooldownTime><!--■クールタイム-->
+                            <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                            <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                            <chanceFactor>0.2</chanceFactor>
+                            <extraMeleeDamages>
+                                <li>
+                                <def>Stun</def><!--■状態異常-->
+                                <amount>10</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationSharp>0</armorPenetrationSharp>
+                            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                        </li>
+                    </tools>
+				</value>
+			</li>
+
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>

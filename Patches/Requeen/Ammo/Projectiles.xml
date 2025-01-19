@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	  <li Class="PatchOperationFindMod">
+			
+		<mods><li>[Aya]Requeen Boss</li></mods>
+			
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+            <!-- Penetrator Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Weapon_Requeen_Bullet_a"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>Weapon_Requeen_Bullet_a</defName>
+						<label>ペネトレイター</label>
+						<graphicData>
+                            <texPath>Weapons/RQ_W_a_b</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>BOSS_RQ_Bullet</damageDef>
+                            <damageAmountBase>10</damageAmountBase>
+						    <armorPenetrationSharp>30</armorPenetrationSharp>
+						    <armorPenetrationBlunt>60</armorPenetrationBlunt>
+                            <speed>120</speed>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+
+            <!-- Desperado Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Weapon_Requeen_Bullet_b"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>Weapon_Requeen_Bullet_b</defName>
+						<label>デスペラード</label>
+						<graphicData>
+                            <texPath>Weapons/RQ_W_b_b</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>BOSS_RQ_Bullet</damageDef>
+                            <damageAmountBase>4</damageAmountBase>
+						    <armorPenetrationSharp>15</armorPenetrationSharp>
+						    <armorPenetrationBlunt>50</armorPenetrationBlunt>
+                            <speed>100</speed>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+
+            <!-- Carnage Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Weapon_Requeen_Bullet_c"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>Weapon_Requeen_Bullet_c</defName>
+						<label>カルネージ</label>
+						<graphicData>
+                            <texPath>Weapons/RQ_W_c_b</texPath><!--■テクスチャ-->
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <explosionRadius>3</explosionRadius >
+                            <damageDef>Bomb</damageDef>
+                            <!-- Use default damage from explosion def -->
+                            <explosionDelay>100</explosionDelay>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+
+            <!-- Tempester Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Weapon_Requeen_Bullet_e"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>Weapon_Requeen_Bullet_e</defName>
+						<label>テンペスター</label>
+						<graphicData>
+                            <texPath>Weapons/RQ_W_b_b</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>BOSS_RQ_Bullet</damageDef>
+                            <damageAmountBase>1.5</damageAmountBase>
+						    <armorPenetrationSharp>6</armorPenetrationSharp>
+						    <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                            <speed>100</speed>
+                        </projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+
+            <!-- Destroyer Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Weapon_Requeen_Bullet_f"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>Weapon_Requeen_Bullet_f</defName>
+						<label>デストロイヤー</label>
+						<graphicData>
+                            <texPath>Weapons/RQ_W_a_b</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>BOSS_RQ_Bullet_b</damageDef>
+                            <damageAmountBase>3</damageAmountBase>
+						    <armorPenetrationSharp>15</armorPenetrationSharp>
+						    <armorPenetrationBlunt>50</armorPenetrationBlunt>
+                            <speed>120</speed>
+                        </projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+
+            <!-- Judgement Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Bullet_TurretSniper"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>BOSS_RQ_Bullet_TurretSniper</defName>
+						<label>ジャッジメント</label>
+						<graphicData>
+                            <texPath>Things/Projectile/Bullet_Big</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                            <drawSize>1.4</drawSize>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>BOSS_RQ_Bullet</damageDef>
+                            <damageAmountBase>5</damageAmountBase>
+						    <armorPenetrationSharp>30</armorPenetrationSharp>
+						    <armorPenetrationBlunt>300</armorPenetrationBlunt>
+                            <speed>120</speed>
+                        </projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+
+             <!-- Testament Projectile -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BOSS_RQ_Bullet_TurretSniper_b"]</xpath>
+				<value>
+					<ThingDef ParentName="BaseBulletCE">
+						<defName>BOSS_RQ_Bullet_TurretSniper_b</defName>
+						<label>テスタメント</label>
+						<graphicData>
+                            <texPath>Things/Projectile/Rocket_Big</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                            <shaderType>TransparentPostLight</shaderType>
+                        </graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+                            <damageDef>BOSS_RQ_Damage_c</damageDef>
+                            <speed>41</speed>
+                            <explosionRadius>5</explosionRadius>
+                            <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
+                            <explosionDamageFalloff>true</explosionDamageFalloff>
+                            <explosionEffect>GiantExplosion</explosionEffect>
+                            <flyOverhead>true</flyOverhead>
+                            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+                            <soundExplode>Explosion_GiantBomb</soundExplode>
+                            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+                            <soundAmbient>MortarRound_Ambient</soundAmbient>
+                        </projectile>
+					</ThingDef>
+				</value>
+			</li>
+
+			
+		</operations>
+		</match>	
+	  </li>
+	</operations>	
+  </Operation>
+</Patch>
