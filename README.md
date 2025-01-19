@@ -55,15 +55,6 @@ This mod adds Combat Extended compatibility for the following races and features
 
 ---
 
-## Features
-- **Compatibility:** Patches gaps in CE's default integration for Ayameduki mods.
-- **Infinite Ammo for Bosses:** Some bosses and late-game monsters use infinite ammo due to missing graphics for custom ammo.
-- **Rebalanced Items:** Late-game armor and weapons rebalanced to align with CE's stat lines.
-- **Bug Fixes:** Addresses compatibility issues like immortal enemies (e.g., Idhale boss resurrection bug).
-
----
-
-
 ## Contribution and Feedback
 If you'd like to improve or extend these patches, feel free to:
 - Submit patches to the CE team for inclusion in their default patches.
