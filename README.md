@@ -1,26 +1,12 @@
-# Ayameduki Race Patches for Combat Extended
+# Overview
+This patches Ayameduki race mods to work with Combat Extended that weren't already patched or had missing content from CE's built-in patcher.  
+Load **after the Ayameduki mods**.
 
-## Overview
-This mod patches Ayameduki race mods to work seamlessly with **Combat Extended (CE)**, covering cases where:
-- CE's built-in patches are missing content.
-- Specific items, weapons, or apparel were not patched correctly.
+This is something I made for myself a while ago, thought I’d share. I have not extensively tested this for all items and races, but in my games, it seems to function well enough.  
 
-Simply load this mod **after the Ayameduki mods** in your load order.
+Stats might be a bit crazy for some of the late-game stuff (*looking at you Idearn*).
 
-I originally created this for personal use but decided to share it with the community. While not extensively tested for every item and race, it functions well enough in my games. Some late-game stats might be a bit overpowered (*looking at you, Idearn*).
-
-If you encounter any issues or missing patches, feel free to report them! I may or may not address them, depending on time and priority.
-
----
-
-## GitHub Repository
-This mod is available on GitHub! You can view the source code and contribute here:  
-[ayameduki_races_ce_patch](https://github.com/ZadesSC/ayameduki_races_ce_patch)
-
----
-
-## Races Already Patched by CE
-The following Ayameduki races are already patched by CE. You **don’t need this mod** for these:
+### Races already patched by CE:
 - [Idhale Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2227425882)
 - [Littluna Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2569091688&searchtext=littluna)
 - [Nearmare Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2198830432&searchtext=nearmare)
@@ -30,34 +16,39 @@ The following Ayameduki races are already patched by CE. You **don’t need this
 - [Xenoorca Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2216916011&searchtext=xenoorca)
 - [Silkeria Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2233666290&searchtext=silkiera)
 
----
-
-## Races and Features Patched by This Mod
-This mod adds Combat Extended compatibility for the following races and features:
-
-### **Chaoura Race**
+### Races (and missing features) patched by this mod:
 - [Chaoura Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2946679071&searchtext=chaoura)
-
-### **Enforcer Boss**
 - [Enforcer Boss](https://steamcommunity.com/sharedfiles/filedetails/?id=2729712799)
-
-### **Eveliet Race**
 - [Eveliet Race](https://steamcommunity.com/workshop/filedetails/?id=3153539856)
-
-### **Idearn Race**
 - [Idearn Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2871413100&searchtext=idearn)
+- [Idhale Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2227425882)
+  - Abysswear apparel
+- [Littluna Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2569091688&searchtext=littluna)
+  - Forbidden Armor
+- [Nearmare Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2198830432&searchtext=nearmare)
+  - Explorer apparel  
+  - Fiend apparel  
+  - Sentinel apparel  
+  - Ts'vaot Rifle  
+  - Ts'vaot Shotgun  
+  - Mishmar Edge
+- [Neclose Race](https://steamcommunity.com/workshop/filedetails/?id=2394460334)
+  - Hairetikos Armor
+- [Nexaga Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2706009136&searchtext=nexaga)
+- [Requeen Boss](https://steamcommunity.com/sharedfiles/filedetails/?id=2504657401&searchtext=requeen)
+- [Silkeria Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2233666290&searchtext=silkiera)
+  - Thermoplate Armor  
+  - Youko's Kimono  
+  - Youko's Hairpin
+- [Solark Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2608237489&searchtext=solark)
+  - Solark Halevh elite race  
+  - Shemash dress
+- [Qualeela Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2763078885&searchtext=qualeela)
+- [Xenoorca Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2216916011&searchtext=xenoorca)
+  - T'hom Neshikha weapon  
+  - Abysswear apparel  
+  - Imperial Armor
 
-### **Additional Items Patched**
-- Nearmare: Explorer, Fiend, Sentinel apparel; Ts'vaot Rifle, Ts'vaot Shotgun, Mishmar Edge.
-- Silkeria: Thermoplate Armor, Youko's Kimono, Youko's Hairpin.
-- Xenoorca: T'hom Neshikha weapon, Abysswear apparel, Imperial Armor.
-- Many more late-game items and apparel (see changelog for full details).
+If any CE folks want to add these to the CE mod patches instead, feel free.
 
----
-
-## Contribution and Feedback
-If you'd like to improve or extend these patches, feel free to:
-- Submit patches to the CE team for inclusion in their default patches.
-- Report issues or missing content here, though I might not get to everything.
-
----
+If you notice anything missing or not working correctly, report it and I might or might not get around to fixing it.
