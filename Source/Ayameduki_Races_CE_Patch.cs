@@ -36,7 +36,10 @@ namespace zades.ayamedukiracece
                 Log.Error($"[Ayameduki CE Patch] Error in static constructor: {ex}");
             }
         }
-
+        
+        // Original Ayameduki code has this set at >=6, which I think is a bug since it cannot reach 6 or higher,
+        // Instead of overhauling the code massively, we will simply increment the number to 6 if it is at 5,
+        // So that the original code for killing the boss and dropping loot runs as intended.
         public static bool Prefix(object __instance, ref int ___EX_Skill_Count)
         {
             // Access and modify EX_Skill_Count directly
