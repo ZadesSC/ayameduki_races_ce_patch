@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		
+		<operations>
+			<li Class="PatchOperationFindMod">
+			<mods><li>[Aya]Zoichor Race</li></mods>
+			<match Class="PatchOperationSequence">
+			<operations>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_ZC_Weapon_a"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>断罪</label>
+                            <capacities>
+                                <li>HAR_ZC_Damage_EX</li>
+                            </capacities>
+                            <power>85</power>
+                            <cooldownTime>0.7</cooldownTime>
+                            <extraMeleeDamages>
+                                <li>
+                                    <def>Stun</def>
+                                    <amount>10</amount>
+                                </li>
+                            </extraMeleeDamages>
+                            <armorPenetrationBlunt>5</armorPenetrationBlunt>
+							<armorPenetrationSharp>70</armorPenetrationSharp>
+						</li>
+					</tools>
+				</value>
+			</li>
+
+			</operations>
+			</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

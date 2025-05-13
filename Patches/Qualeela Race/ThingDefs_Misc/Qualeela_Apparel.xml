@@ -15,7 +15,7 @@
 			
 			
 			
-			<li Class="PatchOperationReplace">
+			<!-- <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[
 				defName="Aya_Race_Ap_C_T_a" or
 				defName="Aya_Race_Ap_C_T_b" or
@@ -27,7 +27,7 @@
 					<Bulk>1</Bulk>
 					<WornBulk>0.1</WornBulk>
 				</value>
-			</li>
+			</li> -->
 
 			
 			
