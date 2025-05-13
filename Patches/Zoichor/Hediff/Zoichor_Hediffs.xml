@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationFindMod">
+        <mods>
+          <li>[Aya]Zoichor Race</li>
+        </mods>
+
+        <match Class="PatchOperationSequence">
+          <operations>
+
+            <!-- ===== Pale Sun (Sealed) Values ===== -->
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="0.001"]/statOffsets/ArmorRating_Sharp</xpath>
+              <value>
+                <ArmorRating_Sharp>-8</ArmorRating_Sharp>
+              </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="0.001"]/statOffsets/ArmorRating_Blunt</xpath>
+              <value>
+                <ArmorRating_Blunt>-16</ArmorRating_Blunt>
+              </value>
+            </li>
+
+            <!-- ===== Pale Sun (Glowing) Values ===== -->
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="1"]/statOffsets/ArmorRating_Sharp</xpath>
+              <value>
+                <ArmorRating_Sharp>4</ArmorRating_Sharp>
+              </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="1"]/statOffsets/ArmorRating_Blunt</xpath>
+              <value>
+                <ArmorRating_Blunt>8</ArmorRating_Blunt>
+              </value>
+            </li>
+
+            <!-- ===== Pale Sun (Wisp) Values ===== -->
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="10"]/statOffsets/ArmorRating_Sharp</xpath>
+              <value>
+                <ArmorRating_Sharp>8</ArmorRating_Sharp>
+              </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="10"]/statOffsets/ArmorRating_Blunt</xpath>
+              <value>
+                <ArmorRating_Blunt>16</ArmorRating_Blunt>
+              </value>
+            </li>
+
+            <!-- ===== Pale Sun (Heavenly Flame) Values ===== -->
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statOffsets/ArmorRating_Sharp</xpath>
+              <value>
+                <ArmorRating_Sharp>16</ArmorRating_Sharp>
+              </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statOffsets/ArmorRating_Blunt</xpath>
+              <value>
+                <ArmorRating_Blunt>32</ArmorRating_Blunt>
+              </value>
+            </li>
+
+            <!-- <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statOffsets/MeleeArmorPenetration</xpath>
+              <value>
+                  <armorPenetrationBlunt>4</armorPenetrationBlunt>
+				  <armorPenetrationSharp>2</armorPenetrationSharp>
+              </value>
+            </li> -->
+
+            <!-- ===== Pale Sun (Sacred Flame) Values ===== -->
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statOffsets/ArmorRating_Sharp</xpath>
+              <value>
+                <ArmorRating_Sharp>24</ArmorRating_Sharp>
+              </value>
+            </li>
+            
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statOffsets/ArmorRating_Blunt</xpath>
+              <value>
+                <ArmorRating_Blunt>48</ArmorRating_Blunt>
+              </value>
+            </li>
+
+            <!-- <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statOffsets/MeleeArmorPenetration</xpath>
+              <value>
+                  <armorPenetrationBlunt>8</armorPenetrationBlunt>
+				  <armorPenetrationSharp>4</armorPenetrationSharp>
+              </value>
+            </li> -->
+
+            <!-- ===== Pale Sun (Final Conflagration) Values ===== -->
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statOffsets/ArmorRating_Sharp</xpath>
+              <value>
+                <ArmorRating_Sharp>48</ArmorRating_Sharp>
+              </value>
+            </li>
+            
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statOffsets/ArmorRating_Blunt</xpath>
+              <value>
+                <ArmorRating_Blunt>96</ArmorRating_Blunt>
+              </value>
+            </li>
+
+            <!-- <li Class="PatchOperationReplace">
+              <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statOffsets/MeleeArmorPenetration</xpath>
+              <value>
+                  <armorPenetrationBlunt>16</armorPenetrationBlunt>
+				  <armorPenetrationSharp>8</armorPenetrationSharp>
+              </value>
+            </li> -->
+
+
+          </operations>
+        </match>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
