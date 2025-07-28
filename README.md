@@ -48,6 +48,7 @@ Stats might be a bit crazy for some of the late-game stuff (*looking at you Idea
   - T'hom Neshikha weapon  
   - Abysswear apparel  
   - Imperial Armor
+- [Zoichor Race](https://steamcommunity.com/sharedfiles/filedetails/?id=3477749439)
 
 If any CE folks want to add these to the CE mod patches instead, feel free.
 
