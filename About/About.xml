@@ -4,7 +4,8 @@
   <author>Zades</author>
   <supportedVersions>
     <li>1.4</li>
-	<li>1.5</li>
+	  <li>1.5</li>
+	  <li>1.6</li>
   </supportedVersions>
   <packageId>zades.ayamedukiracece</packageId>
   <description>Patches Ayameduki Races for Combat Extended</description>
