@@ -26,6 +26,14 @@
 				</value>
 		</li>
 
+		<!--========= Draconic Helmet =========-->
+		<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_SA_Heads_d"]/statBases</xpath>
+				<value>
+				<NightVisionEfficiency_Apparel>0.6</NightVisionEfficiency_Apparel>
+				</value>
+		</li>
+
         </operations>
 		</match>	
 	  </li>

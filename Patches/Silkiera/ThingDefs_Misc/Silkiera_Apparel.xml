@@ -34,6 +34,24 @@
 				</value>
 		</li>
 
+		<li Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="HAR_SK_A_a"]/equippedStatOffsets</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_a"]</xpath>
+				<value>
+					<equippedStatOffsets />
+				</value>
+			</nomatch>
+		</li>
+
+		<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_a"]/equippedStatOffsets</xpath>
+				<value>
+				<CarryWeight>60</CarryWeight>
+				<CarryBulk>8</CarryBulk>
+				</value>
+		</li>
+
         <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_SK_A_a"]/statBases/ArmorRating_Blunt</xpath>
 				<value>
@@ -48,6 +66,7 @@
 				<ArmorRating_Sharp>10</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>10</WornBulk>
+				<NightVisionEfficiency_Apparel>0.5</NightVisionEfficiency_Apparel>
 				</value>
 		</li>
 
@@ -65,6 +84,24 @@
 				<ArmorRating_Sharp>18</ArmorRating_Sharp>
 				<Bulk>10</Bulk>
 				<WornBulk>5</WornBulk>
+				</value>
+		</li>
+
+		<li Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="HAR_SK_A_b"]/equippedStatOffsets</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_b"]</xpath>
+				<value>
+					<equippedStatOffsets />
+				</value>
+			</nomatch>
+		</li>
+
+		<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_SK_A_b"]/equippedStatOffsets</xpath>
+				<value>
+				<CarryWeight>20</CarryWeight>
+				<CarryBulk>5</CarryBulk>
 				</value>
 		</li>
 

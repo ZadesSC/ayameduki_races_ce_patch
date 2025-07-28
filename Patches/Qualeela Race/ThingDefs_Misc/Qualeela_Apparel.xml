@@ -90,6 +90,24 @@
 				<WornBulk>10</WornBulk>
 				</value>
 			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="HAR_QL_A_a"]/equippedStatOffsets</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="HAR_QL_A_a"]</xpath>
+					<value>
+						<equippedStatOffsets />
+					</value>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="HAR_QL_A_a"]/equippedStatOffsets</xpath>
+					<value>
+					<CarryWeight>100</CarryWeight>
+					<CarryBulk>20</CarryBulk>
+					</value>
+			</li>
 			
 
 			<li Class="PatchOperationReplace">
@@ -107,15 +125,6 @@
 					<li>Feet</li>
 				</value>
 			</li>
-
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="HAR_QL_A_a"]/equippedStatOffsets</xpath>
-				<value>
-					<CarryWeight>10</CarryWeight>
-					<CarryBulk>10</CarryBulk>
-				</value>
-			</li>
-
 			
 			
 
@@ -125,6 +134,7 @@
 				<ArmorRating_Sharp>24</ArmorRating_Sharp>
 				<Bulk>10</Bulk>
 				<WornBulk>1</WornBulk>
+				<NightVisionEfficiency_Apparel>0.8</NightVisionEfficiency_Apparel>
 				</value>
 			</li>
 			

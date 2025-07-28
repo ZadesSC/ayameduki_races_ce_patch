@@ -26,6 +26,26 @@
 				<ArmorRating_Sharp>22</ArmorRating_Sharp>
 				<Bulk>80</Bulk>
 				<WornBulk>10</WornBulk>
+				<CarryWeight>100</CarryWeight>
+				<CarryBulk>20</CarryBulk>
+				</value>
+		</li>
+
+		<li Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="HAR_NC_Armor_z"]/equippedStatOffsets</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_NC_Armor_z"]</xpath>
+				<value>
+					<equippedStatOffsets />
+				</value>
+			</nomatch>
+		</li>
+
+		<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="HAR_NC_Armor_z"]/equippedStatOffsets</xpath>
+				<value>
+				<CarryWeight>100</CarryWeight>
+				<CarryBulk>20</CarryBulk>
 				</value>
 		</li>
 
@@ -43,6 +63,7 @@
 				<ArmorRating_Sharp>18</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>10</WornBulk>
+				<NightVisionEfficiency_Apparel>0.75</NightVisionEfficiency_Apparel>
 				</value>
 		</li>
 
