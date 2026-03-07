@@ -55,6 +55,7 @@
             <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_ZC_Tops_e"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>24</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>10</WornBulk>
@@ -90,6 +91,7 @@
             <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_ZC_Heads_e"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>24</ArmorRating_Sharp>
 				<Bulk>20</Bulk>
 				<WornBulk>5</WornBulk>
@@ -108,6 +110,7 @@
             <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_ZC_Shell_f"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>24</ArmorRating_Sharp>
 				<Bulk>10</Bulk>
 				<WornBulk>5</WornBulk>
@@ -126,6 +129,7 @@
             <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_ZC_Tops_d"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>18</ArmorRating_Sharp>
 				<Bulk>80</Bulk>
 				<WornBulk>10</WornBulk>
@@ -161,6 +165,7 @@
             <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_ZC_Heads_d"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>18</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>10</WornBulk>
@@ -179,6 +184,7 @@
             <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_ZC_Shell_e"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>18</ArmorRating_Sharp>
 				<Bulk>10</Bulk>
 				<WornBulk>5</WornBulk>
