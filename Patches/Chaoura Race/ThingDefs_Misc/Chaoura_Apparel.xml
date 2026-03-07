@@ -24,6 +24,7 @@
 					<StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
 					<Bulk>1</Bulk>
 					<WornBulk>1</WornBulk>
+					<ArmorRating_Heat>2</ArmorRating_Heat>
 				</value>
 			</li>
 			
@@ -37,6 +38,7 @@
 					<StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
 					<Bulk>10</Bulk>
 					<WornBulk>5</WornBulk>
+					<ArmorRating_Heat>2</ArmorRating_Heat>
 				</value>
 			</li>
 			
@@ -51,6 +53,7 @@
 					<StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
 					<Bulk>1</Bulk>
 					<WornBulk>1</WornBulk>
+					<ArmorRating_Heat>2</ArmorRating_Heat>
 				</value>
 			</li>
 		</operations>

@@ -43,6 +43,7 @@
         <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_NM_Sh_Cry"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>4</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>5</WornBulk>
@@ -60,6 +61,7 @@
         <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_NM_AH_h"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>4</ArmorRating_Sharp>
 				<Bulk>5</Bulk>
 				<WornBulk>1</WornBulk>
@@ -87,6 +89,7 @@
         <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_NM_Wear_y"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>4</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>5</WornBulk>
@@ -101,6 +104,13 @@
 		</li>
 
 		 <!--========= Lyra Tunica Alpha =========-->
+		<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_NM_A_b"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+				</value>
+		</li>
+
 		<li Class="PatchOperationConditional">
 			<xpath>Defs/ThingDef[defName="HAR_NM_A_b"]/equippedStatOffsets</xpath>
 			<nomatch Class="PatchOperationAdd">
@@ -123,6 +133,7 @@
         <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_NM_A_c"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>12</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>5</WornBulk>
@@ -158,6 +169,7 @@
         <li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_NM_A_d"]/statBases/ArmorRating_Sharp</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<ArmorRating_Sharp>12</ArmorRating_Sharp>
 				<Bulk>40</Bulk>
 				<WornBulk>5</WornBulk>
@@ -193,6 +205,7 @@
         <li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="HAR_NM_AH_g"]/statBases</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<NightVisionEfficiency_Apparel>0.30</NightVisionEfficiency_Apparel>
 				</value>
 		</li>
@@ -246,7 +259,33 @@
 				</value>
 		</li>
 
+		<!--========= Masiahuzloa =========-->
+		<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_NM_A_Belt_a"]/statBases/ArmorRating_Sharp</xpath>
+				<value>
+				<StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+				<ArmorRating_Sharp>16</ArmorRating_Sharp>
+				<Bulk>40</Bulk>
+				<WornBulk>5</WornBulk>
+				<ArmorRating_Heat>1.5</ArmorRating_Heat>
+				</value>
+		</li>
+
+        <li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_NM_A_Belt_a"]/statBases/ArmorRating_Blunt</xpath>
+				<value>
+				<ArmorRating_Blunt>30</ArmorRating_Blunt>
+				</value>
+		</li>
+
 		<!--========= Spirtual Armor =========-->
+		<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_NM_A_a"]/statBases/StuffEffectMultiplierArmor</xpath>
+				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+				</value>
+		</li>
+
 		<li Class="PatchOperationConditional">
 			<xpath>Defs/ThingDef[defName="HAR_NM_A_a"]/equippedStatOffsets</xpath>
 			<nomatch Class="PatchOperationAdd">
@@ -269,6 +308,7 @@
         <li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="HAR_NM_AH_f"]/statBases</xpath>
 				<value>
+				<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 				<NightVisionEfficiency_Apparel>0.70</NightVisionEfficiency_Apparel>
 				</value>
 		</li>

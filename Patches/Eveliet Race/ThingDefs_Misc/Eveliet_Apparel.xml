@@ -11,9 +11,10 @@
 					
 			
 			<!--========= Elyon Armor =========-->
-			<li Class="PatchOperationAdd">
+			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_EL_Apparel_Armor_a"]/statBases/StuffEffectMultiplierArmor</xpath>
 				<value>
+					<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 					<Bulk>80</Bulk>
 					<WornBulk>10</WornBulk>
 				</value>
@@ -52,9 +53,10 @@
 			</li>
 
             <!--========= Elyon Helmet =========-->
-			<li Class="PatchOperationAdd">
+			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="HAR_EL_Apparel_Head_d"]/statBases/StuffEffectMultiplierArmor</xpath>
 				<value>
+					<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
 					<Bulk>40</Bulk>
 					<WornBulk>10</WornBulk>
 					<NightVisionEfficiency_Apparel>0.6</NightVisionEfficiency_Apparel>
