@@ -12,6 +12,7 @@ Source mods:
 - Nearmare: `steamapps/workshop/content/294100/2198830432`
 - Neclose: `steamapps/workshop/content/294100/2394460334`
 - Nexaga: `steamapps/workshop/content/294100/2706009136`
+- Outerm: `steamapps/workshop/content/294100/3675887482`
 - Qualeela: `steamapps/workshop/content/294100/2763078885`
 - Silkeria: `steamapps/workshop/content/294100/2233666290`
 - Solark: `steamapps/workshop/content/294100/2608237489`
