@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<CombatExtended.AmmoSetDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>AmmoSet_HAR_OT_556x45mmNATO_Toxic</defName>
+		<label>5.56x45mm NATO (Toxic)</label>
+		<ammoTypes>
+			<Ammo_556x45mmNATO_FMJ>HAR_OT_Bullet_556x45mmNATO_FMJ_Toxic</Ammo_556x45mmNATO_FMJ>
+			<Ammo_556x45mmNATO_AP>HAR_OT_Bullet_556x45mmNATO_AP_Toxic</Ammo_556x45mmNATO_AP>
+			<Ammo_556x45mmNATO_HP>HAR_OT_Bullet_556x45mmNATO_HP_Toxic</Ammo_556x45mmNATO_HP>
+			<Ammo_556x45mmNATO_Incendiary>HAR_OT_Bullet_556x45mmNATO_Incendiary_Toxic</Ammo_556x45mmNATO_Incendiary>
+			<Ammo_556x45mmNATO_HE>HAR_OT_Bullet_556x45mmNATO_HE_Toxic</Ammo_556x45mmNATO_HE>
+			<Ammo_556x45mmNATO_Sabot>HAR_OT_Bullet_556x45mmNATO_Sabot_Toxic</Ammo_556x45mmNATO_Sabot>
+		</ammoTypes>
+		<similarTo>AmmoSet_RifleIntermediate</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>AmmoSet_HAR_OT_762x51mmNATO_Toxic</defName>
+		<label>7.62x51mm NATO (Toxic)</label>
+		<ammoTypes>
+			<Ammo_762x51mmNATO_FMJ>HAR_OT_Bullet_762x51mmNATO_FMJ_Toxic</Ammo_762x51mmNATO_FMJ>
+			<Ammo_762x51mmNATO_AP>HAR_OT_Bullet_762x51mmNATO_AP_Toxic</Ammo_762x51mmNATO_AP>
+			<Ammo_762x51mmNATO_HP>HAR_OT_Bullet_762x51mmNATO_HP_Toxic</Ammo_762x51mmNATO_HP>
+			<Ammo_762x51mmNATO_Incendiary>HAR_OT_Bullet_762x51mmNATO_Incendiary_Toxic</Ammo_762x51mmNATO_Incendiary>
+			<Ammo_762x51mmNATO_HE>HAR_OT_Bullet_762x51mmNATO_HE_Toxic</Ammo_762x51mmNATO_HE>
+			<Ammo_762x51mmNATO_Sabot>HAR_OT_Bullet_762x51mmNATO_Sabot_Toxic</Ammo_762x51mmNATO_Sabot>
+		</ammoTypes>
+		<similarTo>AmmoSet_Rifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<ThingDef Name="HAR_OT_Base556x45mmNATOToxicBullet" ParentName="Base556x45mmNATOBullet" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>HAR_OT_Damage_Bullet_a</damageDef>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="HAR_OT_Base762x51mmNATOToxicBullet" ParentName="Base762x51mmNATOBullet" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>HAR_OT_Damage_Bullet_a</damageDef>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base556x45mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_556x45mmNATO_FMJ_Toxic</defName>
+		<label>5.56mm NATO bullet (FMJ, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base556x45mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_556x45mmNATO_AP_Toxic</defName>
+		<label>5.56mm NATO bullet (AP, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base556x45mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_556x45mmNATO_HP_Toxic</defName>
+		<label>5.56mm NATO bullet (HP, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>3</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base556x45mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_556x45mmNATO_Incendiary_Toxic</defName>
+		<label>5.56mm NATO bullet (AP-I, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base556x45mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_556x45mmNATO_HE_Toxic</defName>
+		<label>5.56mm NATO bullet (AP-HE, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base556x45mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_556x45mmNATO_Sabot_Toxic</defName>
+		<label>5.56mm NATO bullet (Sabot, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>21</armorPenetrationSharp>
+			<armorPenetrationBlunt>44.18</armorPenetrationBlunt>
+			<speed>227</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base762x51mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_762x51mmNATO_FMJ_Toxic</defName>
+		<label>7.62mm NATO bullet (FMJ, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base762x51mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_762x51mmNATO_AP_Toxic</defName>
+		<label>7.62mm NATO bullet (AP, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base762x51mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_762x51mmNATO_HP_Toxic</defName>
+		<label>7.62mm NATO bullet (HP, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base762x51mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_762x51mmNATO_Incendiary_Toxic</defName>
+		<label>7.62mm NATO bullet (AP-I, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>6</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base762x51mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_762x51mmNATO_HE_Toxic</defName>
+		<label>7.62mm NATO bullet (AP-HE, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>8</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_Base762x51mmNATOToxicBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_762x51mmNATO_Sabot_Toxic</defName>
+		<label>7.62mm NATO bullet (Sabot, toxic)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>25</armorPenetrationSharp>
+			<armorPenetrationBlunt>86.28</armorPenetrationBlunt>
+			<speed>212</speed>
+		</projectile>
+	</ThingDef>
+</Defs>
