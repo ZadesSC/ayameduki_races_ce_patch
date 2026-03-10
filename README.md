@@ -35,6 +35,7 @@ Stats might be a bit crazy for some of the late-game stuff (*looking at you Idea
 - [Neclose Race](https://steamcommunity.com/workshop/filedetails/?id=2394460334)
   - Hairetikos Armor
 - [Nexaga Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2706009136&searchtext=nexaga)
+- [Outerm Race](https://steamcommunity.com/sharedfiles/filedetails/?id=3675887482)
 - [Requeen Boss](https://steamcommunity.com/sharedfiles/filedetails/?id=2504657401&searchtext=requeen)
 - [Silkeria Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2233666290&searchtext=silkiera)
   - Thermoplate Armor  
