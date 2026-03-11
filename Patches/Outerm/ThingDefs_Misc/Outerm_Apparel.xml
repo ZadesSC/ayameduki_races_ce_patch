@@ -119,6 +119,24 @@
 				</value>
 			</li>
 
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_OT_Apparel_H_z"]/apparel/bodyPartGroups</xpath>
+				<value>
+					<bodyPartGroups>
+						<li>FullHead</li>
+					</bodyPartGroups>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HAR_OT_Apparel_H_z"]/apparel/layers</xpath>
+				<value>
+					<layers>
+						<li>Overhead</li>
+					</layers>
+				</value>
+			</li>
+
 		</operations>
 		</match>	
 	  </li>
