@@ -63,6 +63,7 @@
                     <power>1</power>
                     <cooldownTime>2</cooldownTime>
                     <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                    <armorPenetrationBlunt>0.162</armorPenetrationBlunt>
                     <surpriseAttack>
                       <extraMeleeDamages>
                         <li>
@@ -80,6 +81,7 @@
                     <power>1</power>
                     <cooldownTime>2</cooldownTime>
                     <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                    <armorPenetrationBlunt>0.162</armorPenetrationBlunt>
                     <surpriseAttack>
                       <extraMeleeDamages>
                         <li>
