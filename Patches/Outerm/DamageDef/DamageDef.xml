@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>[Aya]Outerm Race</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/DamageDef[defName="HAR_OT_Damage_Weapon_a"]</xpath>
+							<value>
+								<armorCategory>Sharp</armorCategory>
+							</value>
+						</li>
+
+						<li Class="PatchOperationAddModExtension">
+							<xpath>Defs/DamageDef[defName="HAR_OT_Damage_a"]</xpath>
+							<value>
+								<li Class="CombatExtended.DamageDefExtensionCE">
+									<harmOnlyOutsideLayers>true</harmOnlyOutsideLayers>
+								</li>
+							</value>
+						</li>
+
+						<li Class="PatchOperationAddModExtension">
+							<xpath>Defs/DamageDef[defName="HAR_OT_Damage_d"]</xpath>
+							<value>
+								<li Class="CombatExtended.DamageDefExtensionCE">
+									<harmOnlyOutsideLayers>true</harmOnlyOutsideLayers>
+								</li>
+							</value>
+						</li>
+
+						<li Class="PatchOperationAddModExtension">
+							<xpath>Defs/ToolCapacityDef[defName="HAR_OT_Damage_Weapon_a"]</xpath>
+							<value>
+								<li Class="CombatExtended.ModExtensionMeleeToolPenetration">
+									<canHitInternal>true</canHitInternal>
+								</li>
+							</value>
+						</li>
+
+					</operations>
+				</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

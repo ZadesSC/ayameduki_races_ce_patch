@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingCategoryDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>AmmoHAR_OTTirionTpheki</defName>
+		<label>Tirion Tpheki cartridges</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>AmmoHAR_OTTirionCannon</defName>
+		<label>Tirion Cannon rounds</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRailgunRifle</iconPath>
+	</ThingCategoryDef>
+
+	<CombatExtended.AmmoSetDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>AmmoSet_HAR_OT_TirionTpheki</defName>
+		<label>Tirion Tpheki</label>
+		<ammoTypes>
+			<Ammo_HAR_OT_TirionTpheki>HAR_OT_Bullet_TirionTpheki</Ammo_HAR_OT_TirionTpheki>
+		</ammoTypes>
+		<similarTo>AmmoSet_RifleIntermediate</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>AmmoSet_HAR_OT_TirionCannon</defName>
+		<label>Tirion Cannon</label>
+		<ammoTypes>
+			<Ammo_HAR_OT_TirionCannon>HAR_OT_Bullet_TirionCannon</Ammo_HAR_OT_TirionCannon>
+		</ammoTypes>
+		<similarTo>AmmoSet_Rifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="HAR_OT_TirionTphekiAmmoBase" ParentName="SmallAmmoBase" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<description>A toxic, high-penetration cartridge used by the Tirion Tpheki assault rifle.</description>
+		<statBases>
+			<Mass>0.013</Mass>
+			<Bulk>0.02</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoHAR_OTTirionTpheki</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionTphekiAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>Ammo_HAR_OT_TirionTpheki</defName>
+		<label>Tirion Tpheki toxic cartridge</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.05</MarketValue>
+		</statBases>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>HAR_OT_Bullet_TirionTpheki</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="HAR_OT_TirionCannonAmmoBase" ParentName="SmallAmmoBase" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<description>A toxic penetrator round built for the Tirion Cannon sniper rifle.</description>
+		<statBases>
+			<Mass>0.015</Mass>
+			<Bulk>0.02</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoHAR_OTTirionCannon</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionCannonAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>Ammo_HAR_OT_TirionCannon</defName>
+		<label>Tirion Cannon toxic round</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Sabot</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.06</MarketValue>
+		</statBases>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>HAR_OT_Bullet_TirionCannon</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Name="HAR_OT_BaseTirionTphekiBullet" ParentName="Base556x45mmNATOBullet" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>HAR_OT_Damage_Bullet_a</damageDef>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Name="HAR_OT_BaseTirionCannonBullet" ParentName="Base762x51mmNATOBullet" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>HAR_OT_Damage_Bullet_a</damageDef>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_BaseTirionTphekiBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_TirionTpheki</defName>
+		<label>Tirion Tpheki bullet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>21</armorPenetrationSharp>
+			<armorPenetrationBlunt>44.18</armorPenetrationBlunt>
+			<speed>227</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="HAR_OT_BaseTirionCannonBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_TirionCannon</defName>
+		<label>Tirion Cannon bullet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationSharp>26</armorPenetrationSharp>
+			<armorPenetrationBlunt>86.28</armorPenetrationBlunt>
+			<speed>212</speed>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>MakeAmmo_HAR_OT_TirionTpheki</defName>
+		<label>make Tirion Tpheki toxic cartridge x500</label>
+		<description>Craft 500 Tirion Tpheki toxic cartridges.</description>
+		<jobString>Making Tirion Tpheki toxic cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>24</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HAR_OT_TirionTpheki>500</Ammo_HAR_OT_TirionTpheki>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>MakeAmmo_HAR_OT_TirionCannon</defName>
+		<label>make Tirion Cannon toxic round x500</label>
+		<description>Craft 500 Tirion Cannon toxic rounds.</description>
+		<jobString>Making Tirion Cannon toxic rounds.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>26</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HAR_OT_TirionCannon>500</Ammo_HAR_OT_TirionCannon>
+		</products>
+		<workAmount>2600</workAmount>
+	</RecipeDef>
+</Defs>

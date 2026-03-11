@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Littluna Race</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/IncidentDef[defName="HAR_LL_Id_a"]/earliestDay</xpath>
+      <value>
+        <earliestDay>0</earliestDay>
+      </value>
+    </match>
+  </Operation>
+</Patch>

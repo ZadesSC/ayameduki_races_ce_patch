@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>[Aya]Outerm Race</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+
+						<!-- Workbook-aligned CE conversion for Outerm pawn armor offsets. -->
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv2"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv2"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>4.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv2"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.1</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv3"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>2.4</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv3"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>6.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv3"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.2</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv4"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>3.2</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv4"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>8.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv4"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.3</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv5"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>4.0</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv5"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>10.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv5"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.4</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv6"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>4.8</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv6"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>12.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv6"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.5</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv7"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>5.6</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv7"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>14.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv7"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.6</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv8"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>6.4</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv8"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>16.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv8"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.7</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv9"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>7.2</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv9"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>18.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv9"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.8</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv10"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>8.0</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv10"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>20.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="Outerm_Artificial"]/stages/li[label="Lv10"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.9</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_e"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>9.6</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_e"]/stages/li/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>24.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_e"]/stages/li/statFactors/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>1.5</MeleePenetrationFactor>
+							</value>
+						</li>
+
+					</operations>
+				</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
