@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Neclose Race</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/GeneCategoryDef[defName="Aya_Race_GeneCategory_b"]/displayPriorityInXenotype</xpath>
+      <value>
+        <displayPriorityInXenotype>-452</displayPriorityInXenotype>
+      </value>
+    </match>
+  </Operation>
+</Patch>

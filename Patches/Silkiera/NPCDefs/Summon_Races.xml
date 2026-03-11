@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Silkiera Race</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef/race/soundMeleeHitBuilding[.="Pawn_Melee_Punch_HitBuilding"]</xpath>
+      <value>
+        <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Generic</soundMeleeHitBuilding>
+      </value>
+    </match>
+  </Operation>
+</Patch>

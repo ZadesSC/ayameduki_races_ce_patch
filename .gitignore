@@ -4,3 +4,6 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 .codex_tmp/
+/.tools/
+/.decomp_aya_1/
+/.decomp_outterm_1/

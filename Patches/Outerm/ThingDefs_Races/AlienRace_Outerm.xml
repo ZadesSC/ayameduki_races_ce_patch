@@ -52,6 +52,13 @@
             </li>
 
             <li Class="PatchOperationReplace">
+              <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Outerm_Base"]/race/anomalyKnowledge</xpath>
+              <value>
+                <anomalyKnowledge>1</anomalyKnowledge>
+              </value>
+            </li>
+
+            <li Class="PatchOperationReplace">
               <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Outerm_Base"]/tools</xpath>
               <value>
                 <tools>

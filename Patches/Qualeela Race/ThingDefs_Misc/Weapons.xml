@@ -96,7 +96,7 @@
 					<warmupTime>2</warmupTime>
 					<range>52</range>
 					<burstShotCount>25</burstShotCount>
-					<ticksBetweenBurstShots>0.5</ticksBetweenBurstShots>
+					<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
 					<soundCast>HAR_QL_Sound_b</soundCast>
 					<soundCastTail>GunTail_Heavy</soundCastTail>
 					<muzzleFlashScale>9</muzzleFlashScale>
