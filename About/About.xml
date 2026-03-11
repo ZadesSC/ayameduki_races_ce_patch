@@ -8,7 +8,11 @@
 	  <li>1.6</li>
   </supportedVersions>
   <packageId>zades.ayamedukiracece</packageId>
-  <description>Patches Ayameduki Races for Combat Extended</description>
+  <description>Patches Ayameduki Races for Combat Extended.
+
+Recent update highlights:
+- Expanded Outerm Race support with CE ammo, projectiles, weapons, apparel, materials, hediff, body, summon, and race patches.
+- Includes code-side compatibility for special Ayameduki behaviors such as Idhale EX handling and Outerm growing weapons under CE melee.</description>
   <loadAfter>
     <li>CETeam.CombatExtended</li>
     <li>ayameduki.haridhale</li>

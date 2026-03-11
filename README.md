@@ -6,6 +6,12 @@ This is something I made for myself a while ago, thought I’d share. I have not
 
 Stats might be a bit crazy for some of the late-game stuff (*looking at you Idearn*).
 
+### Recent update
+- Added broad Combat Extended support for Outerm Race, including CE ammo and projectiles for the Tirion Tpheki and Tirion Cannon.
+- Added Outerm race, body, summon, apparel, material, weapon, and hediff patch coverage.
+- Added code-side compatibility for Outerm growing weapons under CE melee and the Idhale EX skill fix.
+- Added a few missing follow-up patches for Littluna, Neclose, Saclean, Silkiera, and Zoichor content.
+
 ### Races already patched by CE:
 - [Idhale Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2227425882)
 - [Littluna Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2569091688&searchtext=littluna)
@@ -36,6 +42,13 @@ Stats might be a bit crazy for some of the late-game stuff (*looking at you Idea
   - Hairetikos Armor
 - [Nexaga Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2706009136&searchtext=nexaga)
 - [Outerm Race](https://steamcommunity.com/sharedfiles/filedetails/?id=3675887482)
+  - Tirion Tpheki CE ammo/projectiles
+  - Tirion Cannon CE ammo/projectiles
+  - melee weapons
+  - Diaftra armor and helmet
+  - race/body defs
+  - summon monster
+  - material and hediff support
 - [Requeen Boss](https://steamcommunity.com/sharedfiles/filedetails/?id=2504657401&searchtext=requeen)
 - [Silkeria Race](https://steamcommunity.com/sharedfiles/filedetails/?id=2233666290&searchtext=silkiera)
   - Thermoplate Armor  
