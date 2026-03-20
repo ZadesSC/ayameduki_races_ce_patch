@@ -15,6 +15,7 @@ Recent update highlights:
 - Includes code-side compatibility for special Ayameduki behaviors such as Idhale EX handling and Outerm growing weapons under CE melee.</description>
   <loadAfter>
     <li>CETeam.CombatExtended</li>
+    <li>WRK.AyaTweaks2</li>
     <li>ayameduki.haridhale</li>
     <li>ayameduki.haridhaleex</li>
     <li>ayameduki.bossrequeen</li>
