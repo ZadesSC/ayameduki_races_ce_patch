@@ -156,6 +156,82 @@
 							</value>
 						</li>
 
+						<!-- ========== Tirion Ekliksi grenade ========== -->
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/ThingDef[@Name="HAR_OT_BaseFragGrenadeProjectile"]/thingClass</xpath>
+							<value>
+								<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/ThingDef[@Name="HAR_OT_BaseFragGrenadeProjectile"]/projectile</xpath>
+							<value>
+								<projectile Class="CombatExtended.ProjectilePropertiesCE">
+									<explosionRadius>5</explosionRadius>
+									<damageDef>HAR_OT_Damage_Smoke</damageDef>
+									<damageAmountBase>1</damageAmountBase>
+									<postExplosionSpawnThingDef>HAR_OT_Gas_ToxicCustom</postExplosionSpawnThingDef>
+									<postExplosionSpawnChance>1</postExplosionSpawnChance>
+									<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+									<explosionDelay>100</explosionDelay>
+									<speed>12</speed>
+								</projectile>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/ThingDef[defName="HAR_OT_Weapon_GrenadeFrag"]/comps</xpath>
+							<value>
+								<comps>
+									<li Class="CombatExtended.CompProperties_ExplosiveCE">
+										<damageAmountBase>1</damageAmountBase>
+										<explosiveRadius>3</explosiveRadius>
+										<explosiveDamageType>HAR_OT_Damage_Smoke</explosiveDamageType>
+										<postExplosionSpawnThingDef>HAR_OT_Gas_ToxicCustom</postExplosionSpawnThingDef>
+										<postExplosionSpawnChance>2</postExplosionSpawnChance>
+										<postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+									</li>
+								</comps>
+							</value>
+						</li>
+
+						<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+							<defName>HAR_OT_Weapon_GrenadeFrag</defName>
+							<statBases>
+								<Mass>1</Mass>
+								<Bulk>1.05</Bulk>
+								<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+								<SightsEfficiency>1.0</SightsEfficiency>
+							</statBases>
+							<Properties>
+								<label>グレネードを投げる</label>
+								<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<range>18</range>
+								<warmupTime>2.3</warmupTime>
+								<noiseRadius>4</noiseRadius>
+								<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+								<soundCast>ThrowGrenade</soundCast>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<defaultProjectile>HAR_OT_Proj_GrenadeFrag</defaultProjectile>
+								<onlyManualCast>true</onlyManualCast>
+								<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+								<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+							</Properties>
+						</li>
+
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[defName="HAR_OT_Weapon_GrenadeFrag"]/weaponTags</xpath>
+							<value>
+								<li>CE_AI_AOE</li>
+								<li>CE_OneHandedWeapon</li>
+							</value>
+						</li>
+
 						<!-- ========== Tirion Tpheki ========== -->
 
 						<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
