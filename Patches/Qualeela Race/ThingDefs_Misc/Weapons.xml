@@ -18,6 +18,7 @@
 					<SwayFactor>2</SwayFactor>
 					<Bulk>6.65</Bulk>
 					<Mass>3.3</Mass>
+					<ToughnessRating>20.631</ToughnessRating>
 					<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 				</statBases>
 				
@@ -85,6 +86,7 @@
 					<ShotSpread>0.1</ShotSpread>
 					<SwayFactor>1.4</SwayFactor>
 					<Mass>3.3</Mass>
+					<ToughnessRating>20.631</ToughnessRating>
 					<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 				</statBases>
 				

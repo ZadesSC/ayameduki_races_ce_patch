@@ -47,6 +47,14 @@
                             </tools>
                     </value>
 				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Sword_a"]/statBases</xpath>
+					<value>
+						<Bulk>8</Bulk>
+						<StuffEffectMultiplierToughness>5.657</StuffEffectMultiplierToughness>
+					</value>
+				</li>
 				
                 <!--========= Ts'vaot Rifle =========-->
 				<li Class="PatchOperationReplace">
@@ -75,6 +83,7 @@
                         <ShotSpread>1</ShotSpread>
                         <SwayFactor>1.3</SwayFactor>
                         <Mass>3.5</Mass>
+                        <ToughnessRating>5.158</ToughnessRating>
                         <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
                     </statBases>
 
@@ -144,6 +153,7 @@
                         <ShotSpread>0.2</ShotSpread>
                         <SwayFactor>1.35</SwayFactor>
                         <Mass>3.5</Mass>
+                        <ToughnessRating>6.325</ToughnessRating>
                         <RangedWeapon_Cooldown>0.99</RangedWeapon_Cooldown>
                     </statBases>
 
@@ -215,6 +225,13 @@
 
                 <li Class="PatchOperationRemove">
 				   <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/statBases</xpath>
+                    <value>
+                        <ToughnessRating>5.158</ToughnessRating>
+                    </value>
                 </li>
 
 			</operations>
