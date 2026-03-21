@@ -7,3 +7,6 @@ riderModule.iml
 /.tools/
 /.decomp_aya_1/
 /.decomp_outterm_1/
+/.tmp-py/
+/.tmp-venv/
+/Releases/
