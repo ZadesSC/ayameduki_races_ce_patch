@@ -53,6 +53,7 @@
           <value>
             <Suppressability>1</Suppressability>
             <SmokeSensitivity>1.2</SmokeSensitivity>
+            <NightVisionEfficiency>1.0</NightVisionEfficiency>
           </value>
         </li>
 

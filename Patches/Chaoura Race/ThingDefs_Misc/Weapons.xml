@@ -30,6 +30,14 @@
 					</value>
 				</li>
 
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="HAR_CO_Weapon_a"]/statBases</xpath>
+					<value>
+						<Bulk>1</Bulk>
+						<ToughnessRating>4</ToughnessRating>
+					</value>
+				</li>
+
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="HAR_CO_Weapon_b"]/tools</xpath>
@@ -69,6 +77,14 @@
 					</value>
 				</li>
 
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="HAR_CO_Weapon_b"]/statBases</xpath>
+					<value>
+						<Bulk>10</Bulk>
+						<StuffEffectMultiplierToughness>6.325</StuffEffectMultiplierToughness>
+					</value>
+				</li>
+
 				
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName="HAR_CO_Weapon_c"]/tools</xpath>
@@ -105,6 +121,14 @@
 								<armorPenetrationBlunt>1.28</armorPenetrationBlunt>
 							</li>
 						</tools>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="HAR_CO_Weapon_c"]/statBases</xpath>
+					<value>
+						<Bulk>8</Bulk>
+						<StuffEffectMultiplierToughness>5.657</StuffEffectMultiplierToughness>
 					</value>
 				</li>
 

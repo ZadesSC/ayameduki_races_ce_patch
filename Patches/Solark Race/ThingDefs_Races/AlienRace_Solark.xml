@@ -52,6 +52,7 @@
 				  <value>
 					<Suppressability>0.2</Suppressability>
 					<SmokeSensitivity>0.2</SmokeSensitivity>
+					<NightVisionEfficiency>0.2</NightVisionEfficiency>
 					<MeleeCritChance>1.0</MeleeCritChance>
 					<MeleeParryChance>1.0</MeleeParryChance>
 				  </value>
