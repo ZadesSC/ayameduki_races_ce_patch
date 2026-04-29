@@ -138,6 +138,9 @@
 								<amount>5</amount>
 							</li>
 							</extraMeleeDamages>
+							<armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+							<armorPenetrationSharp>32</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
 						</li>
 					</tools>
 				</value>
