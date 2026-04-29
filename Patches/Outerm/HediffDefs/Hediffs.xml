@@ -201,6 +201,82 @@
 							</value>
 						</li>
 
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv1"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>3.2</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv1"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>8.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv1"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.3</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv2"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>6.4</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv2"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>16.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv2"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.4</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv3"]/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>9.6</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv3"]/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>24.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_i"]/stages/li[label="Lv3"]/statOffsets/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>0.5</MeleePenetrationFactor>
+							</value>
+						</li>
+
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_Idea"]/stages/li/statOffsets/ArmorRating_Sharp</xpath>
+							<value>
+								<ArmorRating_Sharp>19.2</ArmorRating_Sharp>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_Idea"]/stages/li/statOffsets/ArmorRating_Blunt</xpath>
+							<value>
+								<ArmorRating_Blunt>48.0</ArmorRating_Blunt>
+							</value>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/HediffDef[defName="HAR_OT_Hediff_Idea"]/stages/li/statFactors/MeleeArmorPenetration</xpath>
+							<value>
+								<MeleePenetrationFactor>2.0</MeleePenetrationFactor>
+							</value>
+						</li>
+
 					</operations>
 				</match>
 			</li>
