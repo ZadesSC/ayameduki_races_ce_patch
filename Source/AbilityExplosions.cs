@@ -17,6 +17,10 @@ namespace zades.ayamedukiracece
         private static ParameterInfo[] ceParameters;
         private static int projectileIndex;
         private static int damageTypeIndex;
+        private static int damageAmountIndex;
+
+        [ThreadStatic]
+        private static ThingDef detonatingSource;
 
         public static void ApplyPatches(Harmony harmony)
         {
@@ -32,6 +36,7 @@ namespace zades.ayamedukiracece
             ceParameters = ceExplosion.GetParameters();
             projectileIndex = Array.FindIndex(vanillaParameters, parameter => parameter.Name == "projectile");
             damageTypeIndex = Array.FindIndex(vanillaParameters, parameter => parameter.Name == "damType");
+            damageAmountIndex = Array.FindIndex(vanillaParameters, parameter => parameter.Name == "damAmount");
 
             // The two APIs share their explosion arguments. CE adds optional blast settings.
             foreach (ParameterInfo parameter in ceParameters)
@@ -45,7 +50,7 @@ namespace zades.ayamedukiracece
                 }
             }
 
-            if (projectileIndex < 0 || damageTypeIndex < 0)
+            if (projectileIndex < 0 || damageTypeIndex < 0 || damageAmountIndex < 0)
             {
                 Log.Error("[Ayameduki CE Patch] Unsupported vanilla explosion arguments.");
                 return;
@@ -53,17 +58,35 @@ namespace zades.ayamedukiracece
 
             harmony.Patch(vanillaExplosion,
                 prefix: new HarmonyMethod(typeof(AbilityExplosions), nameof(Prefix)));
+            harmony.Patch(AccessTools.Method(typeof(RimWorld.CompExplosive), "Detonate"),
+                prefix: new HarmonyMethod(typeof(AbilityExplosions), nameof(BeginDetonation)),
+                finalizer: new HarmonyMethod(typeof(AbilityExplosions), nameof(EndDetonation)));
+        }
+
+        private static void BeginDetonation(RimWorld.CompExplosive __instance, out ThingDef __state)
+        {
+            __state = detonatingSource;
+            ThingDef source = __instance.parent.def;
+            detonatingSource = source.GetModExtension<AbilityExplosionExtension>() != null ? source : null;
+        }
+
+        private static Exception EndDetonation(Exception __exception, ThingDef __state)
+        {
+            detonatingSource = __state;
+            return __exception;
         }
 
         private static bool Prefix(object[] __args)
         {
             ThingDef projectile = __args[projectileIndex] as ThingDef;
-            if (projectile?.GetModExtension<AbilityExplosionExtension>() == null)
+            if (projectile?.GetModExtension<AbilityExplosionExtension>() == null && detonatingSource == null)
             {
                 return true;
             }
 
             DamageDef damage = (DamageDef)__args[damageTypeIndex];
+            int originalAmount = (int)__args[damageAmountIndex];
+            int resolvedAmount = originalAmount < 0 ? Math.Max(1, damage.defaultDamage) : originalAmount;
             object[] arguments = new object[ceParameters.Length];
             for (int index = 0; index < ceParameters.Length; index++)
             {
@@ -72,8 +95,23 @@ namespace zades.ayamedukiracece
                     original.Name == parameter.Name && original.ParameterType == parameter.ParameterType);
                 object value = originalIndex < 0 ? parameter.DefaultValue : __args[originalIndex];
 
-                if (parameter.Name == "armorPenetration" && value is float penetration && penetration > 0f)
+                if (parameter.Name == "damAmount" && value is int amount && amount < 0)
                 {
+                    value = resolvedAmount;
+                }
+
+                if (parameter.Name == "armorPenetration" && value is float penetration)
+                {
+                    if (originalAmount < 0)
+                    {
+                        penetration = damage.defaultArmorPenetration;
+                    }
+                    if (penetration < 0f)
+                    {
+                        penetration = resolvedAmount * 0.015f;
+                    }
+                    value = penetration;
+
                     // Convert vanilla armor units using the same scale as the race patches.
                     if (damage.armorCategory?.defName == "Sharp")
                     {
