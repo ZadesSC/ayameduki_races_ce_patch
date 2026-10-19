@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Idhale Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="HAR_IH_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw" or def="Eye" or def="Ear" or def="AnimalJaw"][not(groups)]</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="HAR_IH_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw" or def="Eye" or def="Ear" or def="AnimalJaw"][not(groups)]</xpath>
+            <value>
+              <groups/>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="HAR_IH_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw" or def="Eye" or def="Ear" or def="AnimalJaw"]/groups[not(li="CoveredByNaturalArmor")]</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="HAR_IH_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw" or def="Eye" or def="Ear" or def="AnimalJaw"]/groups[not(li="CoveredByNaturalArmor")]</xpath>
+            <value>
+              <li>CoveredByNaturalArmor</li>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

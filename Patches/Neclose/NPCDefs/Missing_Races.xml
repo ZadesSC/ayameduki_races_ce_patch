@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Neclose Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]</xpath>
+                <value>
+                  <li Class="CombatExtended.RacePropertiesExtensionCE">
+                    <bodyShape>Humanoid</bodyShape>
+                  </li>
+                </value>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]/statBases</xpath>
+                <value>
+                  <Suppressability>1</Suppressability>
+                  <SmokeSensitivity>1.2</SmokeSensitivity>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]/statBases/ArmorRating_Sharp</xpath>
+                <value>
+                  <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]/statBases/ArmorRating_Blunt</xpath>
+                <value>
+                  <ArmorRating_Blunt>20</ArmorRating_Blunt>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]/tools</xpath>
+                <value>
+                  <tools Inherit="False">
+                    <li Class="CombatExtended.ToolCE">
+                      <label>幻霧の刃</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>150</power>
+                      <cooldownTime>0.5</cooldownTime>
+                      <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>12</amount>
+                        </li>
+                        <li>
+                          <def>EMP</def>
+                          <amount>20</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>48</armorPenetrationSharp>
+                      <armorPenetrationBlunt>120</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>幻霧の刃</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>100</power>
+                      <cooldownTime>0.5</cooldownTime>
+                      <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>12</amount>
+                        </li>
+                        <li>
+                          <def>EMP</def>
+                          <amount>20</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>48</armorPenetrationSharp>
+                      <armorPenetrationBlunt>120</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>幻霧の刃</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>100</power>
+                      <cooldownTime>0.5</cooldownTime>
+                      <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>12</amount>
+                        </li>
+                        <li>
+                          <def>EMP</def>
+                          <amount>20</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>48</armorPenetrationSharp>
+                      <armorPenetrationBlunt>120</armorPenetrationBlunt>
+                    </li>
+                  </tools>
+                </value>
+              </li>
+              <li Class="PatchOperationConditional">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]/comps</xpath>
+                <nomatch Class="PatchOperationAdd">
+                  <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]</xpath>
+                  <value>
+                    <comps/>
+                  </value>
+                </nomatch>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="HAR_Neclose_b"]/comps</xpath>
+                <value>
+                  <li Class="CombatExtended.CompProperties_Inventory"/>
+                  <li Class="CombatExtended.CompProperties_TacticalManager"/>
+                  <li Class="CombatExtended.CompProperties_Suppressable"/>
+                  <li>
+                    <compClass>CombatExtended.CompPawnGizmo</compClass>
+                  </li>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[@Name="HAR_Neclose_BaseNRPawn_b"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+                <value>
+                  <li>CombatExtended.ITab_Inventory</li>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_NC_M_y_race_NPC"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_NC_M_y_race_NPC"]</xpath>
+                <value>
+                  <tools Inherit="False">
+                    <li Class="CombatExtended.ToolCE">
+                      <label>razorfangs</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>1</power>
+                      <cooldownTime>2</cooldownTime>
+                      <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>1</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>8</armorPenetrationSharp>
+                      <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                    </li>
+                  </tools>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_NC_M_z_race_NPC"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_NC_M_z_race_NPC"]</xpath>
+                <value>
+                  <tools Inherit="False">
+                    <li Class="CombatExtended.ToolCE">
+                      <label>left claw</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>4</power>
+                      <cooldownTime>1</cooldownTime>
+                      <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>1</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>8</armorPenetrationSharp>
+                      <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>right claw</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>4</power>
+                      <cooldownTime>1</cooldownTime>
+                      <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>1</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>8</armorPenetrationSharp>
+                      <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>razorfangs</label>
+                      <capacities>
+                        <li>HAR_NC_Damage_a</li>
+                      </capacities>
+                      <power>6</power>
+                      <cooldownTime>2</cooldownTime>
+                      <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>HAR_NC_Damage_b</def>
+                          <amount>1</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>8</armorPenetrationSharp>
+                      <armorPenetrationBlunt>20</armorPenetrationBlunt>
+                    </li>
+                  </tools>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
