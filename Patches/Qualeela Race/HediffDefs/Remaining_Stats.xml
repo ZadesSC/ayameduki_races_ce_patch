@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Qualeela Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_QL_Hediff_b"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_QL_Hediff_b"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>15</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_QL_Hediff_b"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_QL_Hediff_b"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>6</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
