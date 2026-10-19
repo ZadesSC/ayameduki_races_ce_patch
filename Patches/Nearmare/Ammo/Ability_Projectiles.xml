@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Nearmare Race</li>
+    </mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[@Name="HAR_NM_Bullet_Shell_HighExplosive_Base"]</xpath>
+      <value>
+        <li Class="zades.ayamedukiracece.AbilityExplosionExtension"/>
+      </value>
+    </match>
+  </Operation>
+</Patch>

@@ -24,6 +24,7 @@ namespace zades.ayamedukiracece
 
             TryPatchIdhale(harmony);
             TryPatchOutermGrowingWeapons(harmony);
+            AbilityExplosions.ApplyPatches(harmony);
         }
 
         private static void TryPatchIdhale(Harmony harmony)
