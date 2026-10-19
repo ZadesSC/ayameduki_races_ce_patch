@@ -28,6 +28,7 @@ namespace zades.ayamedukiracece
             AbilityExplosions.ApplyPatches(harmony);
             WallPassingProjectiles.ApplyPatches(harmony);
             AreaMeleeAttacks.ApplyPatches(harmony);
+            PawnMeleePenetration.ApplyPatches(harmony);
         }
 
         private static void TryPatchIdhale(Harmony harmony)

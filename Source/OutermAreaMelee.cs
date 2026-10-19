@@ -82,7 +82,7 @@ namespace zades.ayamedukiracece
 
             StatDef penetrationFactor = DefDatabase<StatDef>.GetNamedSilentFail("MeleePenetrationFactor");
             float multiplier = penetrationFactor == null ? 1f : equipment.GetStatValue(penetrationFactor);
-            ArmorPenetration(ref damage) = extension.armorPenetrationSharp * multiplier;
+            ArmorPenetration(ref damage) = extension.armorPenetrationSharp * multiplier * PawnMeleePenetration.GetFactor(verb);
             return damage;
         }
     }
