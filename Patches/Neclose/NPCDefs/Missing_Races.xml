@@ -127,11 +127,15 @@
                   </li>
                 </value>
               </li>
-              <li Class="PatchOperationReplace">
+              <!-- Keep gear tabs already supplied by inventory mods. -->
+              <li Class="PatchOperationConditional">
                 <xpath>Defs/ThingDef[@Name="HAR_Neclose_BaseNRPawn_b"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
-                <value>
-                  <li>CombatExtended.ITab_Inventory</li>
-                </value>
+                <match Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[@Name="HAR_Neclose_BaseNRPawn_b"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+                  <value>
+                    <li>CombatExtended.ITab_Inventory</li>
+                  </value>
+                </match>
               </li>
             </operations>
           </match>
