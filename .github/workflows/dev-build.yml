@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    uses: ZadesSC/HighDensityHydroponics/.github/workflows/rimworld-ci.yml@0a30614313d103f0b2fa23da45a8b0b8cd171ccb
+    uses: ZadesSC/HighDensityHydroponics/.github/workflows/rimworld-ci.yml@b1568f2acc098c2c3b89cdacea96a2b18ebe929c
     with:
       channel: dev
-      tooling-ref: 0a30614313d103f0b2fa23da45a8b0b8cd171ccb
+      tooling-ref: b1568f2acc098c2c3b89cdacea96a2b18ebe929c
