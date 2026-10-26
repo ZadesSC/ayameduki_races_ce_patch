@@ -1,0 +1,11 @@
+{
+  "assemblies": {
+    "Assemblies/Ayameduki_Races_CE_Patch.dll": "31b51a1f31d5910c7d0b909f338cd73d90c294847e984b1f7032ab1dd4bd8acb"
+  },
+  "provenance": "Committed source/assembly baseline; not proof of compilation. Refresh only after rebuilding and validating the assemblies.",
+  "schemaVersion": 1,
+  "sources": {
+    "Source/Ayameduki Races CE Patch.csproj": "aa848aba8131748cb85d7ba5ba3f33605a6d00ea168e7093e060027d8dcab371",
+    "Source/Ayameduki_Races_CE_Patch.cs": "3ef5cefa37aca971a48f7f06184a5f336111759b2c37e844cdd8cce8f9e6b95f"
+  }
+}
