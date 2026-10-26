@@ -10,3 +10,8 @@ riderModule.iml
 /.tmp-py/
 /.tmp-venv/
 /Releases/
+
+/dist/
+/.rimworld-ci/
+/release-notes.txt
+__pycache__/

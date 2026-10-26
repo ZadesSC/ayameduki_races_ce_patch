@@ -1,0 +1,16 @@
+{
+  "assemblies": {
+    "Assemblies/Ayameduki_Races_CE_Patch.dll": "fb3d7e60844d36f8e6169d10d5f399bb323562a9bfb57b7479829e187a47bd2f"
+  },
+  "provenance": "Committed source/assembly baseline; not proof of compilation. Refresh only after rebuilding and validating the assemblies.",
+  "schemaVersion": 1,
+  "sources": {
+    "Source/AbilityExplosions.cs": "d97db87e135f4ccb8fcdd1ac132b7e8ff92862315cd0f3bc6654ee2d7c2011f8",
+    "Source/AreaMeleeAttacks.cs": "38c1a88b538dd75469bb2a3b1b2f6a62122c838d2e67d82af724e5f1a90ccc21",
+    "Source/Ayameduki Races CE Patch.csproj": "aa848aba8131748cb85d7ba5ba3f33605a6d00ea168e7093e060027d8dcab371",
+    "Source/Ayameduki_Races_CE_Patch.cs": "f1181ef92d651ae62c47c4df66eea6ca29f77124adc90601524291b4a88d7a78",
+    "Source/OutermAreaMelee.cs": "3dba5448948405101cfe82960818199d5a84fc87e28c562435226b4764b0cb4a",
+    "Source/PawnMeleePenetration.cs": "327a5756556a7ea1fc38e6d0fee15b8379796fd88b5f21e5b4cba3c5d8388c32",
+    "Source/WallPassingProjectiles.cs": "38113aec08c26e333c6b9bfb3e76a1ec8346d836f00246ae0c581c3a53a73895"
+  }
+}
