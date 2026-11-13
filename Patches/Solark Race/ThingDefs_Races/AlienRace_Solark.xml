@@ -69,8 +69,9 @@
 				  </value>
 			</li>
 
+			<!-- Solark 1.4–1.6 use the legacy comp; 1.7 identifies the Aya skill by ID. -->
 			<li Class="PatchOperationReplace">
-			 <xpath>Defs/ThingDef[@Name="HAR_Solark_BaseNRPawn_b"]/comps/li[@Class="Solark_Dll.Solark_CompProperties_CommandExplosive"]/explosiveDamageType</xpath>
+			 <xpath>Defs/ThingDef[@Name="HAR_Solark_BaseNRPawn_b"]/comps/li[@Class="Solark_Dll.Solark_CompProperties_CommandExplosive" or (@Class="Aya_Common.Aya_CompProperties_Skill" and skillID="Solark_b_Skill_a")]/explosiveDamageType</xpath>
 				  <value>
 					<explosiveDamageType>Bomb_Solark</explosiveDamageType>
 				  </value>
