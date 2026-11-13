@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Custom gospel bullets do not inherit Bullet's CE building modifier. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/DamageDef[defName="HAR_NM_Damage_Bullet"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/DamageDef[defName="HAR_NM_Damage_Bullet"]/buildingDamageFactor</xpath>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/DamageDef[defName="HAR_NM_Damage_Bullet"]/buildingDamageFactor</xpath>
+        <value>
+          <buildingDamageFactor>0.25</buildingDamageFactor>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/DamageDef[defName="HAR_NM_Damage_Bullet"]</xpath>
+        <value>
+          <buildingDamageFactor>0.25</buildingDamageFactor>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+</Patch>

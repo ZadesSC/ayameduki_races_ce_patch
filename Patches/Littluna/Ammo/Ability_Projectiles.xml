@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Littluna Race</li>
+    </mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName="HAR_LL_EX_Bullet_b" or defName="HAR_LL_EX_Bullet_c" or defName="HAR_LL_EX_Bullet_d"]</xpath>
+      <value>
+        <li Class="zades.ayamedukiracece.AbilityExplosionExtension"/>
+      </value>
+    </match>
+  </Operation>
+</Patch>

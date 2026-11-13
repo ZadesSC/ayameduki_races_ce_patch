@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Idhale Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_b"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_b"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>30</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_b"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_b"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>12</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_c"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_c"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>40</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_c"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_c"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>16</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_c"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_c"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.5</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_d"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_d"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>60</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_d"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_d"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>24</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_d"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_d"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>1</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_e"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_e"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>80</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_e"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_e"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>32</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_e"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_IH_Hediff_EX_e"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>2</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

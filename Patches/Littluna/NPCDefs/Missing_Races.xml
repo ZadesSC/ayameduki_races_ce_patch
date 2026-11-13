@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Littluna Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]</xpath>
+                <value>
+                  <li Class="CombatExtended.RacePropertiesExtensionCE">
+                    <bodyShape>Quadruped</bodyShape>
+                  </li>
+                </value>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]/statBases</xpath>
+                <value>
+                  <Suppressability>0</Suppressability>
+                  <SmokeSensitivity>0</SmokeSensitivity>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]/statBases/ArmorRating_Sharp</xpath>
+                <value>
+                  <ArmorRating_Sharp>-32</ArmorRating_Sharp>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]/statBases/ArmorRating_Blunt</xpath>
+                <value>
+                  <ArmorRating_Blunt>-80</ArmorRating_Blunt>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]/tools</xpath>
+                <value>
+                  <tools Inherit="False">
+                    <li Class="CombatExtended.ToolCE">
+                      <label>マルギテスバース</label>
+                      <capacities>
+                        <li>HAR_LL_Damage_Attack</li>
+                      </capacities>
+                      <power>4</power>
+                      <cooldownTime>1</cooldownTime>
+                      <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>Scratch</def>
+                          <amount>1</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>32</armorPenetrationSharp>
+                      <armorPenetrationBlunt>80</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>マルギテスバース</label>
+                      <capacities>
+                        <li>HAR_LL_Damage_Attack</li>
+                      </capacities>
+                      <power>4</power>
+                      <cooldownTime>1</cooldownTime>
+                      <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>Scratch</def>
+                          <amount>1</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>32</armorPenetrationSharp>
+                      <armorPenetrationBlunt>80</armorPenetrationBlunt>
+                    </li>
+                  </tools>
+                </value>
+              </li>
+              <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]/comps</xpath>
+                <nomatch Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]</xpath>
+                  <value>
+                    <comps/>
+                  </value>
+                </nomatch>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_z"]/comps</xpath>
+                <value>
+                  <li Class="CombatExtended.CompProperties_Inventory"/>
+                  <li Class="CombatExtended.CompProperties_TacticalManager"/>
+                  <li Class="CombatExtended.CompProperties_Suppressable"/>
+                  <li>
+                    <compClass>CombatExtended.CompPawnGizmo</compClass>
+                  </li>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]</xpath>
+                <value>
+                  <li Class="CombatExtended.RacePropertiesExtensionCE">
+                    <bodyShape>Quadruped</bodyShape>
+                  </li>
+                </value>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]/statBases</xpath>
+                <value>
+                  <Suppressability>0</Suppressability>
+                  <SmokeSensitivity>0</SmokeSensitivity>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]/statBases/ArmorRating_Sharp</xpath>
+                <value>
+                  <ArmorRating_Sharp>16</ArmorRating_Sharp>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]/statBases/ArmorRating_Blunt</xpath>
+                <value>
+                  <ArmorRating_Blunt>40</ArmorRating_Blunt>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]/tools</xpath>
+                <value>
+                  <tools Inherit="False">
+                    <li Class="CombatExtended.ToolCE">
+                      <label>マルギテスバース</label>
+                      <capacities>
+                        <li>HAR_LL_Damage_Attack</li>
+                      </capacities>
+                      <power>35</power>
+                      <cooldownTime>0.2</cooldownTime>
+                      <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>Stun</def>
+                          <amount>0.5</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>32</armorPenetrationSharp>
+                      <armorPenetrationBlunt>80</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>マルギテスバース</label>
+                      <capacities>
+                        <li>HAR_LL_Damage_Attack</li>
+                      </capacities>
+                      <power>35</power>
+                      <cooldownTime>0.2</cooldownTime>
+                      <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+                      <extraMeleeDamages>
+                        <li>
+                          <def>Stun</def>
+                          <amount>0.5</amount>
+                        </li>
+                      </extraMeleeDamages>
+                      <armorPenetrationSharp>32</armorPenetrationSharp>
+                      <armorPenetrationBlunt>80</armorPenetrationBlunt>
+                    </li>
+                  </tools>
+                </value>
+              </li>
+              <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]/comps</xpath>
+                <nomatch Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]</xpath>
+                  <value>
+                    <comps/>
+                  </value>
+                </nomatch>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_LL_M_LC"]/comps</xpath>
+                <value>
+                  <li Class="CombatExtended.CompProperties_Inventory"/>
+                  <li Class="CombatExtended.CompProperties_TacticalManager"/>
+                  <li Class="CombatExtended.CompProperties_Suppressable"/>
+                  <li>
+                    <compClass>CombatExtended.CompPawnGizmo</compClass>
+                  </li>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

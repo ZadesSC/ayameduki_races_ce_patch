@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="Aya_Race_Gene_a"]/statOffsets/ArmorRating_Sharp</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/GeneDef[defName="Aya_Race_Gene_a"]/statOffsets/ArmorRating_Sharp</xpath>
+      <value>
+        <ArmorRating_Sharp>-1.6</ArmorRating_Sharp>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="Aya_Race_Gene_a"]/statOffsets/ArmorRating_Blunt</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/GeneDef[defName="Aya_Race_Gene_a"]/statOffsets/ArmorRating_Blunt</xpath>
+      <value>
+        <ArmorRating_Blunt>-4</ArmorRating_Blunt>
+      </value>
+    </match>
+  </Operation>
+</Patch>

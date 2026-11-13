@@ -6,32 +6,32 @@
 		<parent>AmmoRifles</parent>
 		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
 	</ThingCategoryDef>
-
 	<ThingCategoryDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>AmmoHAR_OTTirionCannon</defName>
 		<label>Tirion Cannon rounds</label>
 		<parent>AmmoRifles</parent>
 		<iconPath>UI/Icons/ThingCategories/CaliberRailgunRifle</iconPath>
 	</ThingCategoryDef>
-
 	<CombatExtended.AmmoSetDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>AmmoSet_HAR_OT_TirionTpheki</defName>
 		<label>Tirion Tpheki</label>
 		<ammoTypes>
 			<Ammo_HAR_OT_TirionTpheki>HAR_OT_Bullet_TirionTpheki</Ammo_HAR_OT_TirionTpheki>
+			<Ammo_HAR_OT_TirionTpheki_FMJ>HAR_OT_Bullet_TirionTpheki_FMJ</Ammo_HAR_OT_TirionTpheki_FMJ>
+			<Ammo_HAR_OT_TirionTpheki_API>HAR_OT_Bullet_TirionTpheki_API</Ammo_HAR_OT_TirionTpheki_API>
 		</ammoTypes>
 		<similarTo>AmmoSet_RifleIntermediate</similarTo>
 	</CombatExtended.AmmoSetDef>
-
 	<CombatExtended.AmmoSetDef MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>AmmoSet_HAR_OT_TirionCannon</defName>
 		<label>Tirion Cannon</label>
 		<ammoTypes>
 			<Ammo_HAR_OT_TirionCannon>HAR_OT_Bullet_TirionCannon</Ammo_HAR_OT_TirionCannon>
+			<Ammo_HAR_OT_TirionCannon_FMJ>HAR_OT_Bullet_TirionCannon_FMJ</Ammo_HAR_OT_TirionCannon_FMJ>
+			<Ammo_HAR_OT_TirionCannon_API>HAR_OT_Bullet_TirionCannon_API</Ammo_HAR_OT_TirionCannon_API>
 		</ammoTypes>
 		<similarTo>AmmoSet_Rifle</similarTo>
 	</CombatExtended.AmmoSetDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="HAR_OT_TirionTphekiAmmoBase" ParentName="SmallAmmoBase" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<description>A toxic, high-penetration cartridge used by the Tirion Tpheki assault rifle.</description>
 		<statBases>
@@ -46,10 +46,9 @@
 			<li>AmmoHAR_OTTirionTpheki</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionTphekiAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>Ammo_HAR_OT_TirionTpheki</defName>
-		<label>Tirion Tpheki toxic cartridge</label>
+		<label>Tirion Tpheki toxic cartridge (AP)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/AP</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -60,7 +59,6 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>HAR_OT_Bullet_TirionTpheki</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" Name="HAR_OT_TirionCannonAmmoBase" ParentName="SmallAmmoBase" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<description>A toxic penetrator round built for the Tirion Cannon sniper rifle.</description>
 		<statBases>
@@ -75,10 +73,9 @@
 			<li>AmmoHAR_OTTirionCannon</li>
 		</thingCategories>
 	</ThingDef>
-
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionCannonAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>Ammo_HAR_OT_TirionCannon</defName>
-		<label>Tirion Cannon toxic round</label>
+		<label>Tirion Cannon toxic round (AP)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/Sabot</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -89,13 +86,11 @@
 		<ammoClass>ArmorPiercing</ammoClass>
 		<cookOffProjectile>HAR_OT_Bullet_TirionCannon</cookOffProjectile>
 	</ThingDef>
-
 	<ThingDef Name="HAR_OT_BaseTirionTphekiBullet" ParentName="Base556x45mmNATOBullet" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>HAR_OT_Damage_Bullet_a</damageDef>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef Name="HAR_OT_BaseTirionCannonBullet" ParentName="Base762x51mmNATOBullet" Abstract="True" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
@@ -105,7 +100,6 @@
 			<damageDef>HAR_OT_Damage_Bullet_a</damageDef>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="HAR_OT_BaseTirionTphekiBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>HAR_OT_Bullet_TirionTpheki</defName>
 		<label>Tirion Tpheki bullet</label>
@@ -116,7 +110,6 @@
 			<speed>227</speed>
 		</projectile>
 	</ThingDef>
-
 	<ThingDef ParentName="HAR_OT_BaseTirionCannonBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>HAR_OT_Bullet_TirionCannon</defName>
 		<label>Tirion Cannon bullet</label>
@@ -127,7 +120,6 @@
 			<speed>212</speed>
 		</projectile>
 	</ThingDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>MakeAmmo_HAR_OT_TirionTpheki</defName>
 		<label>make Tirion Tpheki toxic cartridge x500</label>
@@ -153,7 +145,6 @@
 		</products>
 		<workAmount>2200</workAmount>
 	</RecipeDef>
-
 	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
 		<defName>MakeAmmo_HAR_OT_TirionCannon</defName>
 		<label>make Tirion Cannon toxic round x500</label>
@@ -178,5 +169,233 @@
 			<Ammo_HAR_OT_TirionCannon>500</Ammo_HAR_OT_TirionCannon>
 		</products>
 		<workAmount>2600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionTphekiAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>Ammo_HAR_OT_TirionTpheki_FMJ</defName>
+		<label>Tirion Tpheki toxic cartridge (FMJ)</label>
+		<description>A toxic full metal jacket round that trades penetration for greater damage to unarmored targets.</description>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.05</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>HAR_OT_Bullet_TirionTpheki_FMJ</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="HAR_OT_BaseTirionTphekiBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_TirionTpheki_FMJ</defName>
+		<label>Tirion Tpheki bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>16</damageAmountBase>
+			<armorPenetrationSharp>10.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>44.18</armorPenetrationBlunt>
+			<speed>227</speed>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>MakeAmmo_HAR_OT_TirionTpheki_FMJ</defName>
+		<label>make Tirion Tpheki cartridges (FMJ) x500</label>
+		<description>Craft 500 Tirion Tpheki cartridges (FMJ).</description>
+		<jobString>Making Tirion Tpheki cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HAR_OT_TirionTpheki_FMJ>500</Ammo_HAR_OT_TirionTpheki_FMJ>
+		</products>
+		<workAmount>2200</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionTphekiAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>Ammo_HAR_OT_TirionTpheki_API</defName>
+		<label>Tirion Tpheki toxic cartridge (AP-I)</label>
+		<description>A toxic armor-piercing incendiary round that trades some impact damage and penetration for a burning payload.</description>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.08</MarketValue>
+		</statBases>
+		<ammoClass>IncendiaryAP</ammoClass>
+		<cookOffProjectile>HAR_OT_Bullet_TirionTpheki_API</cookOffProjectile>
+		<generateAllowChance>0.65</generateAllowChance>
+	</ThingDef>
+	<ThingDef ParentName="HAR_OT_BaseTirionTphekiBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_TirionTpheki_API</defName>
+		<label>Tirion Tpheki bullet (AP-I)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>18.900000000000002</armorPenetrationSharp>
+			<armorPenetrationBlunt>44.18</armorPenetrationBlunt>
+			<speed>227</speed>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>3</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>MakeAmmo_HAR_OT_TirionTpheki_API</defName>
+		<label>make Tirion Tpheki cartridges (AP-I) x500</label>
+		<description>Craft 500 Tirion Tpheki cartridges (AP-I).</description>
+		<jobString>Making Tirion Tpheki cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>24</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HAR_OT_TirionTpheki_API>500</Ammo_HAR_OT_TirionTpheki_API>
+		</products>
+		<workAmount>2600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionCannonAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>Ammo_HAR_OT_TirionCannon_FMJ</defName>
+		<label>Tirion Cannon toxic cartridge (FMJ)</label>
+		<description>A toxic full metal jacket round that trades penetration for greater damage to unarmored targets.</description>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.05</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>HAR_OT_Bullet_TirionCannon_FMJ</cookOffProjectile>
+	</ThingDef>
+	<ThingDef ParentName="HAR_OT_BaseTirionCannonBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_TirionCannon_FMJ</defName>
+		<label>Tirion Cannon bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>38</damageAmountBase>
+			<armorPenetrationSharp>13.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>86.28</armorPenetrationBlunt>
+			<speed>212</speed>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>MakeAmmo_HAR_OT_TirionCannon_FMJ</defName>
+		<label>make Tirion Cannon cartridges (FMJ) x500</label>
+		<description>Craft 500 Tirion Cannon cartridges (FMJ).</description>
+		<jobString>Making Tirion Cannon cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>22</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HAR_OT_TirionCannon_FMJ>500</Ammo_HAR_OT_TirionCannon_FMJ>
+		</products>
+		<workAmount>2600</workAmount>
+	</RecipeDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="HAR_OT_TirionCannonAmmoBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>Ammo_HAR_OT_TirionCannon_API</defName>
+		<label>Tirion Cannon toxic cartridge (AP-I)</label>
+		<description>A toxic armor-piercing incendiary round that trades some impact damage and penetration for a burning payload.</description>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.08</MarketValue>
+		</statBases>
+		<ammoClass>IncendiaryAP</ammoClass>
+		<cookOffProjectile>HAR_OT_Bullet_TirionCannon_API</cookOffProjectile>
+		<generateAllowChance>0.65</generateAllowChance>
+	</ThingDef>
+	<ThingDef ParentName="HAR_OT_BaseTirionCannonBullet" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>HAR_OT_Bullet_TirionCannon_API</defName>
+		<label>Tirion Cannon bullet (AP-I)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>23.400000000000002</armorPenetrationSharp>
+			<armorPenetrationBlunt>86.28</armorPenetrationBlunt>
+			<speed>212</speed>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+	<RecipeDef ParentName="AmmoRecipeBase" MayRequire="ayameduki.harouterm,ceteam.combatextended">
+		<defName>MakeAmmo_HAR_OT_TirionCannon_API</defName>
+		<label>make Tirion Cannon cartridges (AP-I) x500</label>
+		<description>Craft 500 Tirion Cannon cartridges (AP-I).</description>
+		<jobString>Making Tirion Cannon cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>26</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_HAR_OT_TirionCannon_API>500</Ammo_HAR_OT_TirionCannon_API>
+		</products>
+		<workAmount>3000</workAmount>
 	</RecipeDef>
 </Defs>
