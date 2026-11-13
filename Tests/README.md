@@ -1,5 +1,7 @@
 # Solark compatibility regression
 
+For the separate summon-body regression, see [issue41.md](issue41.md).
+
 The shipped fix supports both Solark layouts: the legacy
 `Solark_Dll.Solark_CompProperties_CommandExplosive` in 1.4–1.6, and
 `Aya_Common.Aya_CompProperties_Skill` **with skillID `Solark_b_Skill_a`** in 1.7.

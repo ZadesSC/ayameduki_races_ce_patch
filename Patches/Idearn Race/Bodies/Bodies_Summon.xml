@@ -1,48 +1,34 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>[1.4]Nearmare Race</li>
+      <li>[Aya]Idearn Race</li>
     </mods>
-
     <match Class="PatchOperationSequence">
       <operations>
-        <!-- === Nearmare Summon === -->
-        <li Class="PatchOperationAdd">
-          <xpath>
-            Defs/BodyDef[defName="HAR_IA_M_Body"]//*[
-            def="Body" or
-            def="Tail" or
-            def="Neck" or
-            def="Nose" or
-            def="Leg" or
-			customLabel="rear left paw" or
-			customLabel="rear right paw"]
-          </xpath>
-
-          <value>
-            <groups/>
-          </value>
+        <li Class="PatchOperationTest">
+          <xpath>Defs/BodyDef[defName="HAR_IA_M_Body"]</xpath>
         </li>
-
-        <li Class="PatchOperationAdd">
-          <xpath>
-            Defs/BodyDef[defName="HAR_IA_M_Body"]//*[
-            def="Body" or
-            def="Tail" or
-            def="Neck" or
-            def="Head" or
-            def="Leg" or
-            def="Paw"]/groups
-          </xpath>
-
-          <value>
-            <li>CoveredByNaturalArmor</li>
-          </value>
+        <!-- Preserve existing attack groups and tolerate previously added coverage. -->
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="HAR_IA_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw"][not(groups)]</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="HAR_IA_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw"][not(groups)]</xpath>
+            <value>
+              <groups/>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="HAR_IA_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw"]/groups[not(li="CoveredByNaturalArmor")]</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="HAR_IA_M_Body"]//*[def="Body" or def="Tail" or def="Neck" or def="Head" or def="Leg" or def="Paw"]/groups[not(li="CoveredByNaturalArmor")]</xpath>
+            <value>
+              <li>CoveredByNaturalArmor</li>
+            </value>
+          </match>
         </li>
       </operations>
     </match>
   </Operation>
-
 </Patch>
