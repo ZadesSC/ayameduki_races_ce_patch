@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Silkiera Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_SK_race_Cat"]</xpath>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAddModExtension">
+                <xpath>Defs/ThingDef[defName="HAR_SK_race_Cat"]</xpath>
+                <value>
+                  <li Class="CombatExtended.RacePropertiesExtensionCE">
+                    <bodyShape>Quadruped</bodyShape>
+                  </li>
+                </value>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="HAR_SK_race_Cat"]/statBases</xpath>
+                <value>
+                  <Suppressability>0</Suppressability>
+                  <SmokeSensitivity>0</SmokeSensitivity>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HAR_SK_race_Cat"]/tools</xpath>
+                <value>
+                  <tools Inherit="False">
+                    <li Class="CombatExtended.ToolCE">
+                      <label>left claw</label>
+                      <capacities>
+                        <li>Scratch</li>
+                      </capacities>
+                      <power>1</power>
+                      <cooldownTime>1.5</cooldownTime>
+                      <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+                      <surpriseAttack>
+                        <extraMeleeDamages>
+                          <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                          </li>
+                        </extraMeleeDamages>
+                      </surpriseAttack>
+                      <armorPenetrationSharp>0.5</armorPenetrationSharp>
+                      <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>right claw</label>
+                      <capacities>
+                        <li>Scratch</li>
+                      </capacities>
+                      <power>1</power>
+                      <cooldownTime>1.5</cooldownTime>
+                      <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+                      <surpriseAttack>
+                        <extraMeleeDamages>
+                          <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                          </li>
+                        </extraMeleeDamages>
+                      </surpriseAttack>
+                      <armorPenetrationSharp>0.5</armorPenetrationSharp>
+                      <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <capacities>
+                        <li>Bite</li>
+                      </capacities>
+                      <power>2</power>
+                      <cooldownTime>2</cooldownTime>
+                      <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+                      <chanceFactor>0.7</chanceFactor>
+                      <surpriseAttack>
+                        <extraMeleeDamages>
+                          <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                          </li>
+                        </extraMeleeDamages>
+                      </surpriseAttack>
+                      <armorPenetrationSharp>0.5</armorPenetrationSharp>
+                      <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                    </li>
+                    <li Class="CombatExtended.ToolCE">
+                      <label>head</label>
+                      <capacities>
+                        <li>Blunt</li>
+                      </capacities>
+                      <power>1</power>
+                      <cooldownTime>2</cooldownTime>
+                      <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                      <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                      <chanceFactor>0.2</chanceFactor>
+                      <armorPenetrationSharp>0.5</armorPenetrationSharp>
+                      <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                    </li>
+                  </tools>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

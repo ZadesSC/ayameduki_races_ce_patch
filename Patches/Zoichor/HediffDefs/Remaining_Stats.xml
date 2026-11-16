@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Zoichor Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="10"]/statFactors/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="10"]/statFactors/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>1.2</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.5</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statFactors/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="100"]/statFactors/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>1.4</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.75</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statFactors/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="500"]/statFactors/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>1.6</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>1</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statFactors/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_a"]/stages/li[minSeverity="2500"]/statFactors/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>2</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_d"]/stages/li[1]/statFactors/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="HAR_ZC_Hediff_d"]/stages/li[1]/statFactors/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Qualeela Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+          <defName>HAR_QL_Weapon_a_Grenade</defName>
+          <statBases>
+            <Mass>1</Mass>
+            <Bulk>1.05</Bulk>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+            <SightsEfficiency>1</SightsEfficiency>
+          </statBases>
+          <Properties>
+            <verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <range>16.9</range>
+            <warmupTime>1.5</warmupTime>
+            <noiseRadius>4</noiseRadius>
+            <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+            <soundCast>ThrowGrenade</soundCast>
+            <targetParams>
+              <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <defaultProjectile>Proj_GrenadeEMP</defaultProjectile>
+            <onlyManualCast>true</onlyManualCast>
+            <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+            <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+          </Properties>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>Defs/ThingDef[defName="HAR_QL_Weapon_a_Grenade"]</xpath>
+          <value>
+            <li Class="zades.ayamedukiracece.AbilityExplosionExtension"/>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Minimal wear-calculation fallback for zero-armor utility gear (CE issue #6). -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[not(ArmorRating_Sharp)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[not(ArmorRating_Sharp)]</xpath>
+      <value>
+        <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[ArmorRating_Sharp=0]/ArmorRating_Sharp</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[ArmorRating_Sharp=0]/ArmorRating_Sharp</xpath>
+      <value>
+        <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[not(ArmorRating_Blunt)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[not(ArmorRating_Blunt)]</xpath>
+      <value>
+        <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[ArmorRating_Blunt=0]/ArmorRating_Blunt</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[@Name="HAR_EL_EyeCover_Base"]/statBases[ArmorRating_Blunt=0]/ArmorRating_Blunt</xpath>
+      <value>
+        <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+      </value>
+    </match>
+  </Operation>
+</Patch>

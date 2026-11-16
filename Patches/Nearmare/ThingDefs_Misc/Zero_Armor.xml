@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Minimal wear-calculation fallback for zero-armor utility gear (CE issue #6). -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[not(ArmorRating_Sharp)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[not(ArmorRating_Sharp)]</xpath>
+      <value>
+        <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[ArmorRating_Sharp=0]/ArmorRating_Sharp</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[ArmorRating_Sharp=0]/ArmorRating_Sharp</xpath>
+      <value>
+        <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[not(ArmorRating_Blunt)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[not(ArmorRating_Blunt)]</xpath>
+      <value>
+        <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[ArmorRating_Blunt=0]/ArmorRating_Blunt</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="HAR_NM_A_EyeCover_a" or defName="HAR_NM_Os_Pf" or defName="HAR_NM_AH_r" or defName="HAR_NM_Sh_r"]/statBases[ArmorRating_Blunt=0]/ArmorRating_Blunt</xpath>
+      <value>
+        <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+      </value>
+    </match>
+  </Operation>
+</Patch>

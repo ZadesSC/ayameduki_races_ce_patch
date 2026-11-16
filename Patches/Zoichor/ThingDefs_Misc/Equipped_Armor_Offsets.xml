@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <!-- Equipped armor offsets affect the wearer separately from the item's own armor.
+       Use fixed CE values based on 1.6/1.7 offsets x16 sharp and x40 blunt.
+       Apply those values across supported versions; retain heat and other effects.
+       Guard each replacement because older mod versions may lack these items or offsets. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Zoichor Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_a" or defName="HAR_ZC_Tops_b" or defName="HAR_ZC_Tops_c"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_a" or defName="HAR_ZC_Tops_b" or defName="HAR_ZC_Tops_c"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_a" or defName="HAR_ZC_Tops_b" or defName="HAR_ZC_Tops_c"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_a" or defName="HAR_ZC_Tops_b" or defName="HAR_ZC_Tops_c"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>4</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_d" or defName="HAR_ZC_Heads_e" or defName="HAR_ZC_Shell_f"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_d" or defName="HAR_ZC_Heads_e" or defName="HAR_ZC_Shell_f"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>16</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_d" or defName="HAR_ZC_Heads_e" or defName="HAR_ZC_Shell_f"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_d" or defName="HAR_ZC_Heads_e" or defName="HAR_ZC_Shell_f"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>40</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_e"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_e"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>24</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_e"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Tops_e"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>60</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Heads_d" or defName="HAR_ZC_Shell_e"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Heads_d" or defName="HAR_ZC_Shell_e"]/equippedStatOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>8</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="HAR_ZC_Heads_d" or defName="HAR_ZC_Shell_e"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="HAR_ZC_Heads_d" or defName="HAR_ZC_Shell_e"]/equippedStatOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>20</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

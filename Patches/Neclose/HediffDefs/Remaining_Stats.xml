@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Neclose Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>4</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.1</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="1"]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="1"]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>8</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="1"]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="1"]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>3.2</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="1"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="1"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.2</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="2"]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="2"]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>12</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="2"]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="2"]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>4.8</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="2"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="2"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.3</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="3"]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="3"]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>16</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="3"]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="3"]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>6.4</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="3"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="3"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.4</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="4"]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="4"]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>20</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="4"]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="4"]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>8</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="4"]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial"]/stages/li[minSeverity="4"]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.5</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial_b"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial_b"]/stages/li[1]/statOffsets/ArmorRating_Blunt</xpath>
+            <value>
+              <ArmorRating_Blunt>20</ArmorRating_Blunt>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial_b"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial_b"]/stages/li[1]/statOffsets/ArmorRating_Sharp</xpath>
+            <value>
+              <ArmorRating_Sharp>8</ArmorRating_Sharp>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/HediffDef[defName="Neclose_Artificial_b"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/HediffDef[defName="Neclose_Artificial_b"]/stages/li[1]/statOffsets/MeleeArmorPenetration</xpath>
+            <value>
+              <MeleePenetrationFactor>0.5</MeleePenetrationFactor>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

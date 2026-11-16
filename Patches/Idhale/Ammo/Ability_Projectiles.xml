@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[Aya]Idhale Race</li>
+    </mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/ThingDef[defName="HAR_IH_Bullet_b"]</xpath>
+      <value>
+        <li Class="zades.ayamedukiracece.AbilityExplosionExtension"/>
+      </value>
+    </match>
+  </Operation>
+</Patch>
